@@ -1,0 +1,105 @@
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <theme href="theme.html" />
+
+  <!--do not theme ajax requests-->
+  <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_notheme.xml" />
+
+  <rules css:if-content="#main">
+
+    <!-- Head: meta -->
+    <drop theme="/html/head/meta" if-content="/html/head/meta"/>
+    <prepend theme="/html/head" content="/html/head/meta" />
+    <!-- Head: title -->
+    <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_header.xml" />
+    <!-- Head: base tag -->
+    <replace theme="/html/head/base" content="/html/head/base" />
+    <!-- Head: styles and scripts-->
+    <drop theme="/html/head/link[not(contains(@href, 'style_custom.css')) and contains(@rel, 'stylesheet')]" if-content="/html/head/link"/>
+    <before theme="/html/head/link[1]" content="/html/head/link[contains(@rel, 'stylesheet')]" />
+    <drop theme="/html/head/script" if-content="/html/head/script"/>
+    <append theme="/html/head" content="/html/head/script" />
+    <append theme="/html/head" content="/html/head/style" />
+    <!--Conditional comments-->
+    <append theme="/html/head">
+      <xsl:for-each select="/html/head/comment()">
+        <xsl:copy />
+      </xsl:for-each>
+    </append>
+
+    <!--Fix wordpress links -->
+    <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_fixlinks.xml" />
+
+    <!--Body-->
+    <copy css:theme="body" css:content="body" />
+
+    <!--Logo-->
+    <replace content="//*[@id='logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/index_files/logo.png</xsl:attribute></replace>
+    <!--Header follow link-->
+    <replace content="//*[@id='topnav']/a[contains(@class, 'follow')]/attribute::href" ><xsl:attribute name="href">http://blog.enquetebeteiligung.de</xsl:attribute></replace>
+    <replace content="//*[@id='topnav']/a[contains(@class, 'follow')]/child::text()" >Blog Enquete-Komission</replace>
+
+    <!--Navigation-->
+    <replace css:content="#nav_dummy">
+      <li id="nav_blog">
+        <a href="http://blog.enquetebeteiligung.de">Blog</a>
+      </li>
+    </replace>
+    <replace css:content="#nav_about">
+      <div id="about_menu">
+        <ul>
+          <li>
+            <a href="/_pages/about" rel="" title="About">Über diese Seite</a>
+            <ul class="children">
+              <li class="page_item page-item-617">
+                <a href="/_pages/about/einsetzungsbeschluss/" title="Einsetzungsbeschluss des Deutschen Bundestags (Drucksache 17/950)">Einsetzungsbeschluss des Deutschen Bundestags (Drucksache 17/950)</a>
+                </li>
+              <li class="page_item page-item-611">
+                <a href="/_pages/about/helfer-und-unterstutzer/" title="Helfer und Unterstützer">Helfer und Unterstützer</a>
+              </li>
+              <li class="page_item page-item-619">
+                <a href="/_pages/about/ehrenamt/" title="Hinweis zu ehrenamtlicher Arbeit">Hinweis zu ehrenamtlicher Arbeit</a>
+              </li>
+              <li class="page_item page-item-622">
+                <a href="/_pages/about/entwicklung/" title="Mitmachen bei der Entwicklung">Mitmachen bei der Entwicklung</a>
+              </li>
+              <li class="page_item page-item-207">
+                <a href="/_pages/about/spenden/" title="Spenden">Spenden</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+    </replace>
+
+    <!--Content body and sidebar: startpage with merged wordpress-->
+    <rules if-content="//*[@id='content-startpage']">
+      <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_startpage.xml" />
+      <!--Workaround to handle bad wordpress html-->
+      <after css:theme-children="#mainbar-dummy" >
+        <p><xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text></p>
+      </after>
+    </rules>
+
+    <!--Content body and sidebar: aboutpage with merged wordpress-->
+    <rules if-path="/_pages/about/">
+      <replace content="//*[@id='main']/attribute::class" ><xsl:attribute name="class">with_wordpress_tabs</xsl:attribute></replace>
+      <drop css:content="#col1" attributes="id" />
+      <drop css:content="#col3" />
+    </rules>
+
+    <!--Content body and sidebar: wordpress pages (/_pages)-->
+    <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_pages.xml" />
+    <xi:include href="rules_wordpress_javascript.xml" />
+
+    <!--Footer-->
+    <replace css:theme="#footer" css:content="#footer" />
+    <replace content="//*[@id='link_footer_logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/index_files/logo_adhocracy_code_footer.png</xsl:attribute></replace>
+
+  </rules>
+</rules>
+

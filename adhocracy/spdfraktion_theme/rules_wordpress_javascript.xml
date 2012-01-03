@@ -1,0 +1,24 @@
+<rules
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmls:xi="http://www.w3.org/2001/XInclude">
+
+  <rules if-path="/_pages">
+
+    <!--Merge in wordpress javascript to generate tabs-->
+    <replace css:content-children="#external_scripts">
+      <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'about')"/>
+       <xsl:copy-of select="document($url_aboutpage)/html/body/script[position() &gt; 1]"/>
+      <p><xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text></p>
+    </replace>
+    <before theme="/html/head/link[last()]">
+      <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'about')"/>
+      <xsl:copy-of select="document($url_aboutpage)/html/head/link[contains(@href, '.ui.')]"/> 
+    </before>    
+
+  </rules>
+ 
+
+</rules>
+ 
