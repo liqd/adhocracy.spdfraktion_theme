@@ -1,5 +1,14 @@
-/*Custom theme css to override the adhocracy css*/
+/*****************************************************
+*  style_custom.css
+*
+*   - custom theme css
+*   - tabs onboarding
+*   - wordpress sidebar widgets
+*
+******************************************************/
 
+
+/*Custom theme css to override the adhocracy css*/
 
 body { color: #2d3441; background: #f7f6f2; }
 
@@ -9,7 +18,6 @@ h1, h2, h3, h4, h5, a, legend, .tabnav li a.active, .tabnav li a:hover {
 h1, h2, h3, h4, h5 {
   font-family: Georgia, serif;
 }
-
 
 .page_margins {
   width: 960px;
@@ -36,7 +44,7 @@ h1, h2, h3, h4, h5 {
 #header .page_wrapper, body.logged_in #header .page_wrapper {
   height: 115px;
   padding-top: 32px !important;
-  background: url('/images/header_image.jpg') center 32px no-repeat;
+  background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
 }
 #logo {
   margin-top: 20px;
@@ -73,11 +81,12 @@ h1, h2, h3, h4, h5 {
   padding: 0 5px 0 8px;
   text-decoration: none;
   line-height: 1em;
-  background: url('/images/element_line_dotted_vertical.gif') left top repeat-y;
+  background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y;
 }
 #nav li:first-child a {
   background: none;
 }
+
 #subheader {
   background: none;
   margin-bottom: 0px;
@@ -88,8 +97,9 @@ h1, h2, h3, h4, h5 {
 #subheader .page_margins {
 
 }
+#main .ui-widget-header,
 #subheader .page_wrapper {
-  background: url("/images/tabs_bg_large.png") no-repeat scroll center bottom transparent;
+  background: url("/static_theme/static/images/tabs_bg_large.png") no-repeat scroll center bottom transparent;
   padding-top: 27px !important;
   overflow: hidden;
   display: block;
@@ -97,26 +107,44 @@ h1, h2, h3, h4, h5 {
 #organisation_logo {
   padding-left: 0px;
 }
+#main .ui-tabs-nav,
 #subnav {
   font-size: 13px;
 }
+#main .ui-tabs-nav li,
 #subnav li {
   background: none;
   height: 36px;
   line-height: 36px;
   position: relative;
 }
+#main .ui-tabs-nav li:hover,
+#subnav li:hover {
+  background: url("/images/sprite_tab_navigation.png") repeat-x scroll 0 -111px transparent;
+}
+#main .ui-tabs-nav li a,
 #subnav li a {
   color: #2D3441;
   font-weight: normal;
   text-transform: uppercase;
+  padding: 0 19px;
 }
+#main .ui-tabs-nav li a:hover,
+#subnav li a:hover {
+  color: #FFF;
+}
+#main .ui-tabs-nav li a:focus,
+#subnav li a:focus {
+  outline: none;
+}
+#main .ui-tabs-nav li.ui-state-active,
 #subnav li.current {
   background: #dcd9d0;
 }
+#main .ui-tabs-nav li.ui-state-active:before,
 #subnav li.current:before {
   content: 'ha';
-  background: url('/images/element_triangle_grey.jpg') top left no-repeat;
+  background: url('/static_theme/static/images/element_triangle_grey.jpg') top left no-repeat;
   width: 34px;
   height: 15px;
   display: block;
@@ -148,10 +176,9 @@ body.logged_in #nav li a {
   margin: 0;
 }
 #main .page_wrapper {
-  padding-top: 30px !important;
   padding-bottom: 60px !important;
+  padding-top: 30px !important;
 }
-
 #footer {
   background: none;
 }
@@ -163,7 +190,7 @@ body.logged_in #nav li a {
   padding: 22px !important;
 }
 #footer_line {
-  background: url("/images/line_footer.gif") repeat-y scroll 283px 20px transparent;
+  background: url("/static_theme/static/images/line_footer.gif") repeat-y scroll 283px 20px transparent;
 }
 #second_footer_line {
   background: none;
@@ -171,13 +198,13 @@ body.logged_in #nav li a {
 #footer, .footer_content h3, .footer_content a { color: #666; }
 
 a.icon_link {
-@ -74,3 +235,16 @@
-    position: absolute;
-    display: none;
+    /*the starpage and onbording tabs have links with this class that should be displayed [joka]*/
+    /*position: absolute;*/
+    /*display: none;*/
 }
 
 .hr {
-  background: url("/images/element_line_dotted_large.gif") repeat-x scroll left top transparent;
+  background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left top transparent;
   height: 6px;
 }
 .pager_wrapper .hr {
@@ -188,14 +215,6 @@ a.icon_link {
   max-width: 632px;
 }
 
-/*Wordpress pages*/
-#main .widget-area .shailan_SubpagesWidget,
-#main .widget-container ul,
-#main ul.subpages li,
-#main .widget-container {
-  list-style: none;
-  background: none;
-}
 
 /*Tabs onboarding aboutpage*/
 
@@ -230,47 +249,15 @@ a.icon_link {
   padding: 27px 0 0 0;
   border-bottom: 1px dotted #CCC;
 }
-#tabs-1 {
-  min-height: 714px;
-}
-#tab_background_dummy {
-  /*This is only here to show some white background during the tab fading out effect*/
-  background-color:#fff;
-  z-index: 1;
-  position: absolute;
-  top: 50px;
-  width: 1004px;
-  height: 700px;
-}
-#tabs-1 {
-  /*This is only here to show some white background during the tab fading out effect*/
-  z-index: 2;
-}
-
 #main .ui-widget-content,
 #main.with_wordpress_tabs .page_wrapper {
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color:transparent;
-  min-height: 750px;
-  position:relative;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
+#main.with_wordpress_tabs .page_wrapper,
 #main.with_wordpress_tabs #col1_content {
-  padding-left: 0;
-  padding-right: 0;
-  /*10px 0 23px;,c */
-}
-#main .ui-widget-header {
-  border:none;
-  background-color: transparent;
-  background: url('/static_theme/index_files/white-50.png') repeat bottom center;
-  padding-top: 14px;
-}
-#tabs-1 > div,
-#tabs-1 h1,
-#main .ui-tabs > div,
-#main .ui-tabs h1 {
-  background-color: #fff;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 #main .ui-tabs,
 #main .ui-tabs .ui-tabs-panel {
@@ -280,36 +267,12 @@ a.icon_link {
 #main .ui-tabs-nav {
   border:none;
   clear: none;
-  height: 36px;
-  font-weight: bold;
-  font-size: 15px;
-  color: #fff;
+  padding-top: 19px;
   margin: 0px;
 }
-#main .ui-tabs-nav li {
-  height: 36px;
-  line-height: 36px;
-  background: url('/images/sprite_tab_navigation.png') repeat-x 0 -60px;
-}
-#main .ui-tabs-nav li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 19px;
-  display: block;
-  font-weight: bold;
-  font-size: 15px;
-}
-#main .ui-tabs-nav li.ui-state-active a {
-  color: #2D3441;
-}
-#main .ui-tabs-nav li.ui-state-active {
-  background: url('/images/sprite_tab_navigation.png') repeat-x 0 -10px;
-}
-#main .ui-tabs-nav li:hover a {
-  color: #fff;
-}
-#main .ui-tabs-nav li:hover {
-  background: url('/images/sprite_tab_navigation.png') repeat-x 0 -111px;
+#main .ui-widget-header {
+  padding-left: 22px;
+  padding-right: 22px;
 }
 #main .ui-widget-header,
 #main .ui-tabs-nav li {
@@ -339,6 +302,18 @@ a.icon_link {
 label.armhint {
     display: none;
 }
+
+
+/*Wordpress pages*/
+
+#main .widget-area .shailan_SubpagesWidget,
+#main .widget-container ul,
+#main ul.subpages li,
+#main .widget-container {
+  list-style: none;
+  background: none;
+}
+
 
 /* Menu in the right column */
 

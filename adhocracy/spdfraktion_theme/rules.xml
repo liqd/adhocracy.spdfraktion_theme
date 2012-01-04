@@ -38,43 +38,9 @@
     <copy css:theme="body" css:content="body" />
 
     <!--Logo-->
-    <replace content="//*[@id='logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/index_files/logo.png</xsl:attribute></replace>
-    <!--Header follow link-->
-    <replace content="//*[@id='topnav']/a[contains(@class, 'follow')]/attribute::href" ><xsl:attribute name="href">http://blog.enquetebeteiligung.de</xsl:attribute></replace>
-    <replace content="//*[@id='topnav']/a[contains(@class, 'follow')]/child::text()" >Blog Enquete-Komission</replace>
+    <replace content="//*[@id='logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/static/images/logo_big_spd.png</xsl:attribute></replace>
 
     <!--Navigation-->
-    <replace css:content="#nav_dummy">
-      <li id="nav_blog">
-        <a href="http://blog.enquetebeteiligung.de">Blog</a>
-      </li>
-    </replace>
-    <replace css:content="#nav_about">
-      <div id="about_menu">
-        <ul>
-          <li>
-            <a href="/_pages/about" rel="" title="About">Über diese Seite</a>
-            <ul class="children">
-              <li class="page_item page-item-617">
-                <a href="/_pages/about/einsetzungsbeschluss/" title="Einsetzungsbeschluss des Deutschen Bundestags (Drucksache 17/950)">Einsetzungsbeschluss des Deutschen Bundestags (Drucksache 17/950)</a>
-                </li>
-              <li class="page_item page-item-611">
-                <a href="/_pages/about/helfer-und-unterstutzer/" title="Helfer und Unterstützer">Helfer und Unterstützer</a>
-              </li>
-              <li class="page_item page-item-619">
-                <a href="/_pages/about/ehrenamt/" title="Hinweis zu ehrenamtlicher Arbeit">Hinweis zu ehrenamtlicher Arbeit</a>
-              </li>
-              <li class="page_item page-item-622">
-                <a href="/_pages/about/entwicklung/" title="Mitmachen bei der Entwicklung">Mitmachen bei der Entwicklung</a>
-              </li>
-              <li class="page_item page-item-207">
-                <a href="/_pages/about/spenden/" title="Spenden">Spenden</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-    </div>
-    </replace>
 
     <!--Content body and sidebar: startpage with merged wordpress-->
     <rules if-content="//*[@id='content-startpage']">
@@ -95,10 +61,6 @@
     <!--Content body and sidebar: wordpress pages (/_pages)-->
     <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_pages.xml" />
     <xi:include href="rules_wordpress_javascript.xml" />
-
-    <!--Footer-->
-    <replace css:theme="#footer" css:content="#footer" />
-    <replace content="//*[@id='link_footer_logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/index_files/logo_adhocracy_code_footer.png</xsl:attribute></replace>
 
   </rules>
 </rules>
