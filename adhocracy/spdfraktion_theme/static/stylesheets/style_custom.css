@@ -24,13 +24,19 @@ h1, h2, h3, h4, h5, h6, legend {
   font-size: 34px;
   font-weight: normal;
   margin-left: 0;
-} 
+}
 
 .meta a, .comment_form a {
   color: #666;
 }
 .register a, .register a.link_more_info, .filter_box a {
   color: #2d3441;
+}
+.register a.link_register_now, .register a.link_about_info {
+  background-position: 0 -600px; //undo hack to make button work with different word length,  joka
+}
+.register a.link_register_now:hover, .register a.link_about_info:hover {
+  background-position: 0 -600px; //undo hack to make button work with different word length,  joka
 }
 .meta a:hover, .register a:hover, .register a.link_more_info:hover, .comment_form a:hover, .filter_box a:hover {
   color: #e0001a;
@@ -382,6 +388,9 @@ li.content_box:nth-child(2n+2) {
   padding-right: 0;
   width: 65%;
 }
+#main .ui-widget-content ul {
+  padding-left: 16px;
+}
 #main .ui-widget .register {
   margin-left: 13px;
   margin-bottom: 60px;
@@ -394,7 +403,7 @@ li.content_box:nth-child(2n+2) {
   margin: 0 23px 27px 23px;
   padding: 27px 0 0 0;
   background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
-  padding-bottom: 11px; 
+  padding-bottom: 11px;
 }
 #main .ui-widget-content,
 #main.with_wordpress_tabs .page_wrapper {
@@ -472,10 +481,10 @@ label.armhint {
 #col3 ul.subpages {
   margin: 0;
   padding: 0;
-  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left bottom #fff; 
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left bottom #fff;
 }
 #col3 ul.subpages li {
-  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left top; 
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left top;
 }
 #col3 ul.subpages li a {
   display: block;
