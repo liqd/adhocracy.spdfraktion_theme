@@ -98,6 +98,9 @@ a.show_comments:hover, a.new_comment:hover, a.participate:hover {
   padding-top: 32px !important;
   background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
 }
+#header .page_wrapper {
+  overflow: visible; /*allow long popup menu */
+}
 #logo {
   margin-top: 20px;
 }
@@ -148,8 +151,14 @@ body.logged_in #logo {
 #nav li a:hover, #nav li.current a {
   color: #e0001a;
 }
+#user_menu a.show_me {
+  line-height: 1em; /*normalise line height, joka*/
+  background: none; /*disable right dotted line, joka */
+}
+#about_menu ul.children,
 #nav ul.children, #user_menu ul.children {
   background: #fff;
+  margin-top: 6px;
   padding: 0 20px;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
