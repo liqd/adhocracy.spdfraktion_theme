@@ -136,14 +136,15 @@ body.logged_in #logo {
 #nav li.current, #nav li:hover {
   background: none;
 }
-#nav li a {
+#about_menu_link,
+#nav li > a {
   color: #2d3441;
   display: block;
   height: auto;
   padding: 0 5px 0 8px;
   text-decoration: none;
   line-height: 1em;
-  background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y;
+  background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y !important;  /*make sure styles.css does not override this, joka */
 }
 #nav li a:hover, #nav li.current a {
   color: #e0001a;
@@ -152,10 +153,13 @@ body.logged_in #logo {
   line-height: 1em; /*normalise line height, joka*/
   background: none; /*disable right dotted line, joka */
 }
+#about_menu_link,
+#user_menu a.show_me {
+  margin-bottom: 6px;
+}
 #about_menu ul.children,
 #nav ul.children, #user_menu ul.children {
   background: #fff;
-  margin-top: 6px;
   padding: 0 20px;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -168,6 +172,7 @@ body.logged_in #logo {
 #nav ul.children li:first-child, #user_menu ul.children li:first-child {
   border-top: none;
 }
+#about_menu ul.children li a,
 #nav ul.children li a, #user_menu ul.children li a {
   color: #2D3441;
   display: block;
@@ -175,6 +180,7 @@ body.logged_in #logo {
   font-weight: normal;
   height: 27px;
   line-height: 27px;
+  background: none repeat scroll 0 0 transparent !important;
 }
 .paper_selection {
   padding-top: 45px;
