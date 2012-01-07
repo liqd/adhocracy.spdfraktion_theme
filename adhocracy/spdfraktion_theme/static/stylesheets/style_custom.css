@@ -146,6 +146,8 @@ body.logged_in #logo {
   line-height: 1em;
   background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y !important;  /*make sure styles.css does not override this, joka */
 }
+
+.current #about_menu_link,
 #nav li a:hover, #nav li.current a {
   color: #e0001a;
 }
