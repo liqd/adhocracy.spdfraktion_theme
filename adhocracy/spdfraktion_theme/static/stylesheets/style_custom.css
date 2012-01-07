@@ -98,9 +98,6 @@ a.show_comments:hover, a.new_comment:hover, a.participate:hover {
   padding-top: 32px !important;
   background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
 }
-#header .page_wrapper {
-  overflow: visible; /*allow long popup menu */
-}
 #logo {
   margin-top: 20px;
 }
