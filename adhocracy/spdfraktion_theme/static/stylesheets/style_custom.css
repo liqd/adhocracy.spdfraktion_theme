@@ -12,13 +12,57 @@
 
 body { color: #2d3441; background: #f7f6f2; }
 
-h1, h2, h3, h4, h5, a, legend, .tabnav li a.active, .tabnav li a:hover {
+h1, h2, h3, h4, h5, a, legend, .tabnav li a.active, .tabnav li a:hover, .ui-widget-content a {
   color: #e0001a;
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6, legend {
   font-family: Georgia, serif;
 }
+.page_title, h1 {
+  background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
+  padding-bottom: 11px;
+  font-size: 34px;
+  font-weight: normal;
+  margin-left: 0;
+} 
 
+.meta a, .comment_form a {
+  color: #666;
+}
+.register a, .register a.link_more_info, .filter_box a {
+  color: #2d3441;
+}
+.meta a:hover, .register a:hover, .register a.link_more_info:hover, .comment_form a:hover, .filter_box a:hover {
+  color: #e0001a;
+  text-decoration: underline;
+}
+a.button, .submit button, .submit input {
+  background: url("/static_theme/static/images/sprite_buttons.png") repeat-x scroll 0 -200px transparent;
+  border: 1px solid #ccc;
+  color: #2d3441;
+}
+a.button_small {
+  background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -250px transparent;
+  border: 1px solid #ccc;
+  color: #2d3441;
+}
+a.button:hover, a.button_small:hover, .submit button:hover, .submit input:hover {
+  color: #e0001a;
+  text-decoration: none;
+}
+a.follow_paper {
+  background: url("/static_theme/static/images/sprite_buttons.png") no-repeat scroll 0 -1px transparent;
+  border: 1px solid #ccc;
+  color: #2d3441;
+}
+a.show_comments, a.new_comment, a.participate {
+  background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -350px transparent;
+  border: 1px solid #ccc;
+  color: #2d3441;
+}
+a.show_comments:hover, a.new_comment:hover, a.participate:hover {
+  color: #e0001a;
+}
 .page_margins {
   width: 960px;
   padding: 0 10px;
@@ -26,6 +70,8 @@ h1, h2, h3, h4, h5 {
 }
 .page_wrapper {
   padding: 0 22px !important;
+  display: block;
+  overflow: hidden;
 }
 .full_teaser {
   padding: 0;
@@ -49,12 +95,22 @@ h1, h2, h3, h4, h5 {
 #logo {
   margin-top: 20px;
 }
+body.logged_in #logo {
+  height: auto;
+}
 #header #topnav {
   right: auto;
   left: 23px;
   top: 5px;
   font-size: 13px;
 }
+#searchbox, .list_filter {
+  padding-right: 0;
+}
+#searchform #s, .list_form input.q {
+  width: 170px;
+}
+
 #nav {
   position: absolute;
   right: 23px;
@@ -75,7 +131,7 @@ h1, h2, h3, h4, h5 {
   background: none;
 }
 #nav li a {
-  color: #969BA2;
+  color: #2d3441;
   display: block;
   height: auto;
   padding: 0 5px 0 8px;
@@ -83,10 +139,66 @@ h1, h2, h3, h4, h5 {
   line-height: 1em;
   background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y;
 }
-#nav li:first-child a {
-  background: none;
+#nav li a:hover, #nav li.current a {
+  color: #e0001a;
 }
-
+#nav ul.children, #user_menu ul.children {
+  background: #fff;
+  padding: 0 20px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#nav ul.children li, #user_menu ul.children li {
+  background: none !important;
+  border-top: 1px dotted #ccc;
+}
+#nav ul.children li:first-child, #user_menu ul.children li:first-child {
+  border-top: none;
+}
+#nav ul.children li a, #user_menu ul.children li a {
+  color: #2D3441;
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+  height: 27px;
+  line-height: 27px;
+}
+.paper_selection {
+  padding-top: 45px;
+}
+#sidebar_nav {
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left bottom transparent;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  font-size: 15px;
+}
+#sidebar_nav > div {
+    background: none;
+    padding-bottom: 0;
+}
+#sidebar_nav ul {
+  background: none;
+  padding: 0;
+}
+#sidebar_nav li a {
+  color: #2D3441;
+  font-weight: normal;
+}
+#sidebar_nav li, #sidebar_nav li:first-child {
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
+}
+#sidebar_nav li a:hover:before, #sidebar_nav li a.current:before {
+  background: url("/static_theme/static/images/element_arrow_red.png") no-repeat scroll center transparent;
+}
+#sidebar_nav li a:hover, #sidebar_nav li a.current {
+  background: none;
+  text-decoration: none;
+  color: #e0001a;
+}
+#paper_box, #selection_box {
+  background: #f7f6f2;
+}
 #subheader {
   background: none;
   margin-bottom: 0px;
@@ -99,14 +211,29 @@ h1, h2, h3, h4, h5 {
 }
 #main .ui-widget-header,
 #subheader .page_wrapper {
-  background: url("/static_theme/static/images/tabs_bg_large.png") no-repeat scroll center bottom transparent;
-  padding-top: 27px !important;
-  overflow: hidden;
-  display: block;
+  background: url("/static_theme/static/images/subheader_shadow_grey.png") repeat-x left bottom #f7f6f2;
+  padding-top: 30px !important;
+  padding-bottom: 15px !important;
 }
 #organisation_logo {
   padding-left: 0px;
 }
+
+#content-startpage {
+  background: url("/static_theme/static/images/box_shadow_grey.png") repeat-x left bottom #f7f6f2;
+  padding: 30px 22px 1px;
+  margin: -30px -22px 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+.register a.button {
+  color: #e0001a;
+}
+
+#stats {
+  border-top: none;
+  padding-top: 30px;
+}
+
 #main .ui-tabs-nav,
 #subnav {
   font-size: 13px;
@@ -143,7 +270,7 @@ h1, h2, h3, h4, h5 {
 }
 #main .ui-tabs-nav li.ui-state-active:before,
 #subnav li.current:before {
-  content: 'ha';
+  content: '';
   background: url('/static_theme/static/images/element_triangle_grey.jpg') top left no-repeat;
   width: 34px;
   height: 15px;
@@ -190,7 +317,7 @@ body.logged_in #nav li a {
   padding: 22px !important;
 }
 #footer_line {
-  background: url("/static_theme/static/images/line_footer.gif") repeat-y scroll 283px 20px transparent;
+  background: url("/images/element_line_dotted_small.gif") repeat-y scroll 283px 20px transparent;
 }
 #second_footer_line {
   background: none;
@@ -204,18 +331,36 @@ a.icon_link {
 }
 
 .hr {
-  background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left top transparent;
-  height: 6px;
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
+  height: 1px;
 }
 .pager_wrapper .hr {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
-.form_wrapper {
-  max-width: 632px;
+.form_wrapper, ul.comments_list, .comment_wrapper {
+  background: #f7f6f2;
 }
-
-
+.comment_form {
+  background: #fff;
+}
+.content_list {
+  background: #f7f6f2;
+  padding: 11px;
+  margin-bottom: 22px;
+}
+li.content_box {
+  background: #fff;
+}
+li.content_box h3, li.content_box .meta {
+  padding: 0 11px;
+}
+li.content_box:first-child {
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left top #fff;
+}
+li.content_box:nth-child(2n+2) {
+  background: #f7f6f2;
+}
 /*Tabs onboarding aboutpage*/
 
 #main .ui-widget {
@@ -239,6 +384,7 @@ a.icon_link {
 }
 #main .ui-widget .register {
   margin-left: 13px;
+  margin-bottom: 60px;
 }
 #main .ui-widget img {
   margin-left: 23px;
@@ -247,7 +393,8 @@ a.icon_link {
 #main .ui-widget h1 {
   margin: 0 23px 27px 23px;
   padding: 27px 0 0 0;
-  border-bottom: 1px dotted #CCC;
+  background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
+  padding-bottom: 11px; 
 }
 #main .ui-widget-content,
 #main.with_wordpress_tabs .page_wrapper {
@@ -316,30 +463,28 @@ label.armhint {
 
 
 /* Menu in the right column */
-
-#col3 .widget-container {
-    padding-right: 2em;
+#secondary {
+  padding: 0 0 0 10px;
 }
-
+#secondary ul.xoxo {
+  margin: 0;
+}
 #col3 ul.subpages {
-background: #39586a;
-padding: 0.5em 1.5em;
+  margin: 0;
+  padding: 0;
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left bottom #fff; 
 }
-
-#col3 ul.subpages li a{
-display: block;
-color: white;
-border-top: 1px solid #4a6674;
-border-bottom: 1px solid #2b4856;
-width: 100%;
-padding: 0.5em 0;
-font-weight: bold;
+#col3 ul.subpages li {
+  background: url("/images/element_line_dotted_small.gif") repeat-x scroll left top; 
 }
-
-#col3 ul.subpages li:first-child a {
-border-top: transparent;
+#col3 ul.subpages li a {
+  display: block;
+  color: #2d3441;
+  padding: 0.5em;
+  font-weight: normal;
+  font-size: 15px;
 }
-
-#col3 ul.subpages li:last-child a {
-border-bottom: transparent;
+#col3 ul.subpages li a:hover, #col3 ul.subpages li.current_page_item a{
+  color: #e0001a;
+  text-decoration: none;
 }
