@@ -65,41 +65,47 @@
         </ul>
        </div>
        </li>
-       <li class="page_item page-item-611">
-         <a href="/_pages/hintergruende/" title="Hintergründe">Hintergründe</a>
-       </li>
     </replace>
     <!--TODO: This is not DRY joka-->
     <rules if-path="/_pages/about">
-      <replace css:content="#nav_about">
-        <div id="about_menu" class="current">
-          <ul>
-            <li>
-              <a href="/_pages/about" rel="" title="About" id="about_menu_link">Über diese Seite</a>
-              <ul class="children">
-                <li class="page_item page-item-617">
-                  <a href="/_pages/about/mehr-erfahren" title="Mehr Erfahren">Mehr Erfahren</a>
-                  </li>
-                <li class="page_item page-item-611">
-                  <a href="/_pages/about/hintergruende" title="Hintergründe">Hingergründe</a>
-                </li>
-                <li class="page_item page-item-619">
-                  <a href="/_pages/about/organisationen" title="Organisationen">Organisationen</a>
-                </li>
-                <li class="page_item page-item-622">
-                  <a href="/_pages/about/adhocracy" title="Adhocracy">Adhocracy</a>
-                </li>
-                <li class="page_item page-item-207">
-                  <a href="/_pages/about/imprint" title="Impressum">Impressum</a>
-                </li>
-                <li class="page_item page-item-208">
-                  <a href="/_pages/about/kontakt" title="Kontakt">Kontakt</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </replace>
+     <replace css:content="#nav_about">
+      <li>
+       <div id="about_menu">
+        <ul>
+          <li class="current">
+            <a href="/_pages/about" rel="" title="About" id="about_menu_link">Über diese Seite</a>
+            <ul class="children">
+              <li class="page_item page-item-619">
+                <a href="/_pages/about/organisationen" title="Organisationen">Organisationen</a>
+              </li>
+              <li class="page_item page-item-622">
+                <a href="/_pages/about/adhocracy" title="Adhocracy">Adhocracy</a>
+              </li>
+              <li class="page_item page-item-207">
+                <a href="/_pages/about/imprint" title="Impressum">Impressum</a>
+              </li>
+              <li class="page_item page-item-208">
+                <a href="/_pages/about/kontakt" title="Kontakt">Kontakt</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+       </div>
+      </li>
+     </replace>
+    </rules>
+
+    <replace css:content="#nav_dummy">
+      <li>
+        <a href="/_pages/hintergruende/" title="Hintergründe">Hintergründe</a>
+      </li>
+    </replace>
+    <rules if-path="/_pages/hintergruende">
+     <replace css:content="#nav_dummy">
+        <li class="current">
+         <a href="/_pages/hintergruende/" title="Hintergründe">Hintergründe</a>
+       </li>
+     </replace>
     </rules>
 
     <!--Content body and sidebar: startpage with merged wordpress-->
