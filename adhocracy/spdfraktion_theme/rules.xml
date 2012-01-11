@@ -42,17 +42,12 @@
 
     <!--Navigation-->
     <replace css:content="#nav_about">
-      <div id="about_menu">
+      <li>
+       <div id="about_menu">
         <ul>
           <li>
             <a href="/_pages/about" class="" rel="" title="About" id="about_menu_link">Über diese Seite</a>
             <ul class="children">
-              <li class="page_item page-item-617">
-                <a href="/_pages/about/mehr-erfahren" title="Mehr Erfahren">Mehr Erfahren</a>
-                </li>
-              <li class="page_item page-item-611">
-                <a href="/_pages/about/hintergruende" title="Hintergründe">Hingergründe</a>
-              </li>
               <li class="page_item page-item-619">
                 <a href="/_pages/about/organisationen" title="Organisationen">Organisationen</a>
               </li>
@@ -68,7 +63,11 @@
             </ul>
           </li>
         </ul>
-    </div>
+       </div>
+       </li>
+       <li class="page_item page-item-611">
+         <a href="/_pages/about/hintergruende" title="Hintergründe">Hintergründe</a>
+       </li>
     </replace>
     <!--TODO: This is not DRY joka-->
     <rules if-path="/_pages/about">
