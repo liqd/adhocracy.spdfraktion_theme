@@ -8,12 +8,12 @@
 
     <!--Merge in wordpress javascript to generate tabs-->
     <replace css:content-children="#external_scripts">
-      <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'about/mehr-erfahren')"/>
+      <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'mehr-erfahren')"/>
        <xsl:copy-of select="document($url_aboutpage)/html/body/script[position() &gt; 1]"/>
       <p><xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text></p>
     </replace>
     <after theme="/html/head/title">
-      <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'about/mehr-erfahren')"/>
+      <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'mehr-erfahren')"/>
       <xsl:copy-of select="document($url_aboutpage)/html/head/link[contains(@href, '.ui.')]"/>
     </after>
 

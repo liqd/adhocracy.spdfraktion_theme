@@ -41,6 +41,8 @@
     <replace content="//*[@id='logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/static/images/logo_big_spd.png</xsl:attribute></replace>
 
     <!--Navigation-->
+
+    <!--Navigation - about menu-->
     <replace css:content="#nav_about">
       <li>
        <div id="about_menu">
@@ -95,6 +97,7 @@
      </replace>
     </rules>
 
+    <!--Navigation - hintergruende-->
     <replace css:content="#nav_dummy">
       <li>
         <a href="/_pages/hintergruende/" title="Hintergründe">Hintergründe</a>
@@ -106,7 +109,18 @@
          <a href="/_pages/hintergruende/" title="Hintergründe">Hintergründe</a>
        </li>
      </replace>
+     <replace content="//*[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+     <replace content="//*[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+     <replace content="//*[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
     </rules>
+
+    <!--Navigation - mehr erfahren-->
+    <rules if-path="/_pages/mehr-erfahren">
+     <replace content="//*[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+     <replace content="//*[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+     <replace content="//*[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+    </rules>
+
 
     <!--Content body and sidebar: startpage with merged wordpress-->
     <rules if-content="//*[@id='content-startpage']">
@@ -118,7 +132,7 @@
     </rules>
 
     <!--Content body and sidebar: aboutpage with merged wordpress-->
-    <rules if-path="/_pages/about/mehr-erfahren">
+    <rules if-path="/_pages/mehr-erfahren">
       <replace content="//*[@id='main']/attribute::class" ><xsl:attribute name="class">with_wordpress_tabs</xsl:attribute></replace>
       <drop css:content="#col1" attributes="id" />
       <drop css:content="#col3" />
