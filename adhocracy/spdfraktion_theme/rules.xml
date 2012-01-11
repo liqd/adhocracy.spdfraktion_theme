@@ -66,7 +66,7 @@
        </div>
        </li>
        <li class="page_item page-item-611">
-         <a href="/_pages/about/hintergruende" title="Hintergründe">Hintergründe</a>
+         <a href="/_pages/hintergruende/" title="Hintergründe">Hintergründe</a>
        </li>
     </replace>
     <!--TODO: This is not DRY joka-->
