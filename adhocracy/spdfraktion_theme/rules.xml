@@ -148,6 +148,96 @@
     <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_pages.xml" />
     <xi:include href="rules_wordpress_javascript.xml" />
 
+    <!-- Footer -->
+    <replace css:content="footer">
+    <footer>
+      <div id="footer">
+	<div class="page_margins">
+	  <div class="page_wrapper">
+	    <div id="footer_line">
+	      <div role="complementary" class="subcolumns" id="second_footer_line">
+		<div class="c33l footer_content">
+                  <ul>
+		    <li><a href="/_pages/help">
+		      Hilfe
+		    </a></li>
+		    <li><a href="/_pages/codex">
+		      Verhaltenscodex
+		    </a></li>
+		    <li><a href="/_pages/terms">
+		      Nutzungsbedingungen
+		    </a></li>
+		    <li><a href="/_pages/privacy">
+		      Datenschutz
+		    </a></li>
+		    <li><a href="/_pages/about/imprint">
+		      Impressum
+		    </a></li>
+		    <li><a href="/_pages/about/kontakt">
+		      Kontakt
+		    </a></li>
+                  </ul>
+		</div>
+		
+		<div class="c33l footer_content">
+                  <ul>
+		    <li>
+		      <a href="http://twitter.com/#!/spdbt">
+			<img alt="SPD Bundestagsfraktion auf Twitter"
+			     src="/static_theme/static/images/twitter_footer.png" />
+		      </a>
+		    </li>
+		    <li>
+		      <a href="https://plus.google.com/103178420867180228321/posts">
+			<img alt="SPD Bundestagsfraktion auf Google+"
+			     src="/static_theme/static/images/google_plus_footer.png" />
+		      </a>
+		    </li>
+		    <li>
+		      <a href="https://www.facebook.com/spdbundestagsfraktion">
+			<img alt="SPD Bundestagsfraktion auf Facebook"
+			     src="/static_theme/static/images/facebook_footer.png" />
+		      </a>
+		    </li>
+                  </ul>
+		</div>
+
+              <div class="c33r footer_content">
+                <div class="subcr">
+                  <div class="footer_box">
+                    <div class="subcolumns">
+                      <h3>Die Plattform wird betrieben mit</h3>
+                      <p><a id="link_footer_logo" title="AdhocracyCode" 
+			    href="http://code.adhocracy.de/">
+			<img alt="AdhocracyCode" 
+			     src="/static_theme/static/images/adhocracy_logo_footer.png" />
+		      </a></p>
+                      <h3>Die Plattform wird betrieben von</h3>
+                      <p><a id="link_footer_logo" title="Liqd e.V."
+			    href="liqd.net/">
+			<img alt="Liqd e.V." 
+			     src="/static_theme/static/images/liqd_logo_footer.png" />
+		      </a></p>
+                      <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/de/">
+			  <img alt="Creative Commons License" src="/images/80x15.png" />
+			</a>
+                        <a rel="license" href="http://www.opendefinition.org/">
+			  <img alt="Open Definition" src="/images/oc_80x15_blue.png" />
+			</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</replace>
   </rules>
 </rules>
 
