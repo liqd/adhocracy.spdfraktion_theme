@@ -42,6 +42,12 @@
 
     <!--Navigation-->
 
+    <!--Navigation - Twitter link durch link auf SPD-Seite ersetzen -->
+
+    <replace css:content="#topnav a.follow">
+      <a href="https://www.spdfraktion.de">Zur Homepage der Fraktion</a>
+    </replace>
+
     <!--Navigation - about menu-->
     <replace css:content="#nav_about">
       <li>
