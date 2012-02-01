@@ -161,6 +161,11 @@ body.logged_in #logo {
 #nav li a:hover, #nav li.current a {
   color: #e0001a;
 }
+
+#nav li:first-child a {
+  background: none;
+}
+
 #user_menu a.show_me {
   line-height: 1em; /*normalise line height, joka*/
   background: none; /*disable right dotted line, joka */
@@ -236,9 +241,12 @@ body.logged_in #logo {
   padding-top: 0px;
   overflow: auto;
 }
-#subheader .page_margins {
 
+#subheader .page_wrapper {
+  overflow: hidden;
+  display: block; 
 }
+
 #main .ui-widget-header,
 #subheader .page_wrapper {
   background: url("/static_theme/static/images/subheader_shadow_grey.png") repeat-x left bottom #f7f6f2;
@@ -366,6 +374,11 @@ a.icon_link {
 }
 .pager_wrapper .hr {
   margin-bottom: 0px;
+}
+
+
+.form_wrapper {
+  max-width: 632px;
 }
 
 .form_wrapper, ul.comments_list, .comment_wrapper {
