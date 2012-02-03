@@ -7,7 +7,7 @@
   <rules if-path="/_pages">
 
     <!--Merge in wordpress javascript to generate tabs-->
-    <replace css:content-children="#external_scripts">
+    <replace css:content-children="div#external_scripts">
       <xsl:variable name="url_aboutpage" select="concat('http://', $wordpress_backend, '/', 'mehr-erfahren')"/>
        <xsl:copy-of select="document($url_aboutpage)/html/body/script[position() &gt; 1]"/>
       <p><xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text></p>
