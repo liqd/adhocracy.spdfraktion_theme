@@ -51,56 +51,22 @@
     <!--Navigation - about menu-->
     <replace css:content="li#nav_about">
       <li>
-       <div id="about_menu">
-        <ul>
-          <li>
-            <a href="/_pages/about" class="" rel="" title="About" id="about_menu_link">Über diese Seite</a>
-            <ul class="children">
-              <li class="page_item page-item-619">
-                <a href="/_pages/about/organisationen" title="Organisationen">Organisationen</a>
-              </li>
-              <li class="page_item page-item-622">
-                <a href="/_pages/about/adhocracy" title="Adhocracy">Adhocracy</a>
-              </li>
-              <li class="page_item page-item-207">
-                <a href="/_pages/about/imprint" title="Impressum">Impressum</a>
-              </li>
-              <li class="page_item page-item-208">
-                <a href="/_pages/about/kontakt" title="Kontakt">Kontakt</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-       </div>
-       </li>
-    </replace>
-    <!--TODO: This is not DRY joka-->
-    <rules if-path="/_pages/about">
-     <replace css:content="li#nav_about">
-      <li>
-       <div id="about_menu">
-        <ul>
-          <li class="current">
-            <a href="/_pages/about" rel="" title="About" id="about_menu_link">Über diese Seite</a>
-            <ul class="children">
-              <li class="page_item page-item-619">
-                <a href="/_pages/about/organisationen" title="Organisationen">Organisationen</a>
-              </li>
-              <li class="page_item page-item-622">
-                <a href="/_pages/about/adhocracy" title="Adhocracy">Adhocracy</a>
-              </li>
-              <li class="page_item page-item-207">
-                <a href="/_pages/about/imprint" title="Impressum">Impressum</a>
-              </li>
-              <li class="page_item page-item-208">
-                <a href="/_pages/about/kontakt" title="Kontakt">Kontakt</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-       </div>
+        <a href="/_pages/about" class="" rel="" title="About" id="about_menu_link">Über diese Seite</a>
+        <xsl:variable name="url_menupage" select="concat('http://', $wordpress_backend, '/')"/>
+        <xsl:copy-of select="document($url_menupage)//div[@role='navigation']/div/ul/li[@class='page_item page-item-447']/ul"/>
       </li>
-     </replace>
+    </replace>
+    <rules if-path="/_pages/about">
+      <replace css:content="li#nav_about">
+        <li class="current">
+          <a href="/_pages/about" class="" rel="" title="About" id="about_menu_link">Über diese Seite</a>
+          <xsl:variable name="url_menupage" select="concat('http://', $wordpress_backend, '/')"/>
+          <xsl:copy-of select="document($url_menupage)//div[@role='navigation']/div/ul/li[@class='page_item page-item-447']/ul"/>
+        </li>
+      </replace>
+      <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+      <replace content="//li[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+      <replace content="//li[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
     </rules>
 
     <!--Navigation - hintergruende-->
@@ -121,7 +87,7 @@
     </rules>
 
     <!--Navigation - mehr erfahren-->
-    <rules if-path="/_pages/mehr-erfahren">
+    <rules if-path="/_pages/about/mehr-erfahren">
      <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
      <replace content="//li[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
      <replace content="//li[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
@@ -138,7 +104,7 @@
     </rules>
 
     <!--Content body and sidebar: aboutpage with merged wordpress-->
-    <rules if-path="/_pages/mehr-erfahren">
+    <rules if-path="/_pages/about/mehr-erfahren">
       <replace content="//div[@id='main']/attribute::class" ><xsl:attribute name="class">with_wordpress_tabs</xsl:attribute></replace>
       <drop css:content="#col1" attributes="id" />
       <drop css:content="#col3" />
