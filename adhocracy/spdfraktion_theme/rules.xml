@@ -118,13 +118,6 @@
      </replace>
     </rules>
 
-
-    <!--Navigation - mehr erfahren-->
-    <rules if-path="/_pages/about/mehr-erfahren">
-     <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-    </rules>
-
-
     <!--Content body and sidebar: startpage with merged wordpress-->
     <rules if-content="//div[@id='content-startpage']">
       <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_startpage.xml" />
