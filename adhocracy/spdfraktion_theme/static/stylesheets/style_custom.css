@@ -199,9 +199,11 @@ body.logged_in #logo {
   display: block;
   font-size: 13px;
   font-weight: normal;
-  height: 27px;
   line-height: 27px;
   background: none repeat scroll 0 0 transparent !important;
+}
+#nav ul.children li {
+ height: auto;
 }
 #nav div ul li ul li ul { /*remove 3.level navigation from wordpress content*/
   display:none !important;
