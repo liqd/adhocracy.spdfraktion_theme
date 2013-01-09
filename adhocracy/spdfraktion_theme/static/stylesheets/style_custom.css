@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, legend {
 
 #col1_content > h2 + .hr, .full_teaser > h2 + .hr {
   display: none;
-} 
+}
 
 
 .meta a, .comment_form a {
@@ -203,6 +203,9 @@ body.logged_in #logo {
   line-height: 27px;
   background: none repeat scroll 0 0 transparent !important;
 }
+#nav div ul li ul li ul { /*remove 3.level navigation from wordpress content*/
+  display:none !important;
+}
 .paper_selection {
   padding-top: 45px;
 }
@@ -248,7 +251,7 @@ body.logged_in #logo {
 
 #subheader .page_wrapper {
   overflow: hidden;
-  display: block; 
+  display: block;
 }
 
 #main .ui-widget-header,
