@@ -128,7 +128,7 @@
     </rules>
 
     <!--Content body and sidebar: aboutpage with merged wordpress-->
-    <rules if-path="/_pages/about/mehr-erfahren">
+    <rules if-path="/_pages/about/mehr-erfahren-2">
       <replace content="//div[@id='main']/attribute::class" ><xsl:attribute name="class">with_wordpress_tabs</xsl:attribute></replace>
       <drop css:content="#col1" attributes="id" />
       <drop css:content="#col3" />
