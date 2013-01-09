@@ -48,6 +48,25 @@
       <a href="https://www.spdfraktion.de">Zur Homepage der Fraktion</a>
     </replace>
 
+    <!--Navigation - start-->
+    <replace css:content="li#nav_home">
+      <li>
+        <a href="http://debatten.spdfraktion.staging.adhocracy.cc/instance/debatten" class="" rel="" title="Start">Start</a>
+      </li>
+    </replace>
+    <rules if-path="/instance/debatten">
+      <replace css:content="li#nav_home">
+        <li class="current">
+          <a href="http://debatten.spdfraktion.staging.adhocracy.cc/instance/debatten" class="" rel="" title="Start">Start</a>
+        </li>
+      </replace>
+      <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
+    </rules>
+
+
+    <!--Navigation - instances menu-->
+    <drop css:content="li#nav_instances" />
+
     <!--Navigation - about menu-->
     <replace css:content="li#nav_about">
       <li>
@@ -65,8 +84,6 @@
         </li>
       </replace>
       <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-      <replace content="//li[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-      <replace content="//li[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
     </rules>
 
     <!--Navigation - hintergruende-->
@@ -82,15 +99,11 @@
        </li>
      </replace>
      <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-     <replace content="//li[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-     <replace content="//li[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
     </rules>
 
     <!--Navigation - mehr erfahren-->
     <rules if-path="/_pages/about/mehr-erfahren">
      <replace content="//li[@id='nav_help']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-     <replace content="//li[@id='nav_home']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
-     <replace content="//li[@id='nav_instances']/attribute::class"><xsl:attribute name="class"></xsl:attribute></replace>
     </rules>
 
 
