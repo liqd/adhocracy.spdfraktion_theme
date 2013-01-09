@@ -108,7 +108,7 @@
         <xsl:copy-of select="document($url_menupage)//div[@role='navigation']/div/ul/li[@class='page_item page-item-510']/ul"/>
       </li>
     </replace>
-    <rules if-path="/_pages/hintergruende">
+    <rules if-path="/_pages/help">
      <replace css:content="li#nav_help">
         <li class="current">
          <a href="/_pages/help" class="staticlink_help" rel="" title="">Hilfe</a>
