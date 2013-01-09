@@ -38,6 +38,7 @@
     <copy theme="/html/body" content="/html/body" />
 
     <!--Logo-->
+    <replace content="//a[@id='logo']/attribute::href" ><xsl:attribute name="href">http://debatten.spdfraktion.staging.adhocracy.cc/instance/debatten</xsl:attribute></replace>
     <replace content="//a[@id='logo']/img/attribute::src" ><xsl:attribute name="src">/static_theme/static/images/logo_big_spd.png</xsl:attribute></replace>
 
     <!--Navigation-->
