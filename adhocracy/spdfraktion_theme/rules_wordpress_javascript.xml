@@ -7,11 +7,11 @@
   <rules if-path="/_pages">
 
     <replace css:content-children="div#external_scripts">
-      <script type="text/javascript" src="http://spdfraktion.wordpress.liqd.net/wp-includes/js/jquery/jquery.js?=1.6.1"></script>
-      <script type='text/javascript' src='http://spdfraktion.wordpress.liqd.net/wp-includes/js/jquery/ui.core.js?ver=1.8.12'></script>
-      <script type='text/javascript' src='http://spdfraktion.wordpress.liqd.net/wp-includes/js/jquery/ui.widget.js?ver=1.8.12'></script>
-      <script type='text/javascript' src='http://spdfraktion.wordpress.liqd.net/wp-includes/js/jquery/ui.tabs.js?ver=1.8.12'></script>
-      <script type='text/javascript' src='http://spdfraktion.wordpress.liqd.net/wp-content/plugins/put/js/cookie.js'></script>
+      <script type="text/javascript" src="/static_theme/static/scripts/jquery.js?=1.6.1"></script>
+      <script type='text/javascript' src='/static_theme/static/scripts/ui.core.js?ver=1.8.12'></script>
+      <script type='text/javascript' src='/static_theme/static/scripts/ui.widget.js?ver=1.8.12'></script>
+      <script type='text/javascript' src='/static_theme/static/scripts/ui.tabs.js?ver=1.8.12'></script>
+      <script type='text/javascript' src='/static_theme/static/scripts/cookie.js'></script>
       <script type="text/javascript">
         /* &lt;![CDATA[ */
         var tab_settings = {
@@ -20,11 +20,11 @@
         };
         /* ]]&gt; */
       </script>
-      <script type="text/javascript" src="http://spdfraktion.wordpress.liqd.net/wp-content/plugins/put/js/post-ui-tabs.js?ver=1.0.4"></script>
+      <script type="text/javascript" src="/static_theme/static/scripts/post-ui-tabs.js?ver=1.0.4"></script>
       <p><xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text></p>
     </replace>
     <after theme="/html/head/title">
-      <link rel='stylesheet' id='jquery-ui-tabs-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/themes/base/jquery.ui.all.css?ver=1.8.11' type='text/css' media='all'></link>
+      <link rel='stylesheet' id='jquery-ui-tabs-css'  href='/static_theme/static/stylesheets/jquery.ui.all.css?ver=1.8.11' type='text/css' media='all'></link>
     </after>
 
   </rules>
