@@ -186,6 +186,9 @@ body.logged_in #logo {
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
+#user_menu:hover ul.children {
+  display:block !important; /*workaround, this gets overriden somehow without !important */
+}
 #nav ul.children li, #user_menu ul.children li {
   background: none !important;
   border-top: 1px dotted #ccc;
