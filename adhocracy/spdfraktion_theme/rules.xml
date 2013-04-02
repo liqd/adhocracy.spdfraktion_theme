@@ -24,6 +24,10 @@
     <drop theme="/html/head/script" if-content="/html/head/script"/>
     <append theme="/html/head" content="/html/head/script" />
     <append theme="/html/head" content="/html/head/style" />
+    <!-- RSS -->
+    <replace theme="/html/head/link[contains(@type, 'application/rss+xml')]" content="/html/head/link[contains(@type, 'application/rss+xml')]" />
+    <!-- Favicon -->
+    <replace theme="/html/head/link[contains(@rel, 'icon')]" content="/html/head/link[contains(@rel, 'icon')]" />
     <!--Conditional comments-->
     <append theme="/html/head">
       <xsl:for-each select="/html/head/comment()">
