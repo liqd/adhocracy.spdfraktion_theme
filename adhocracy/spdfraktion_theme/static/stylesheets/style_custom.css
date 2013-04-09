@@ -275,7 +275,7 @@ body.logged_in #logo {
   margin: -30px -22px 0;
   border-bottom: 1px dotted #CCCCCC;
 }
-.register a.button {
+.register a.button, .register a.button.large {
   color: #e0001a;
 }
 
