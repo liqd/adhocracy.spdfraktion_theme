@@ -61,27 +61,6 @@ h1, h2, h3, h4, h5, h6, legend {
     padding: 0 15px 1px 22px;
 }
 
-#header {
-    background: none;
-    height: 147px;
-}
-#header .page_wrapper, body.logged_in #header .page_wrapper {
-    height: 115px;
-    padding-top: 32px !important;
-    background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
-}
-#logo {
-    margin-top: 20px;
-}
-body.logged_in #logo {
-    height: auto;
-}
-#header #topnav {
-    right: auto;
-    left: 23px;
-    top: 5px;
-    font-size: 13px;
-}
 #searchbox, .list_filter {
     padding-right: 0;
 }
@@ -89,86 +68,6 @@ body.logged_in #logo {
     width: 170px;
 }
 
-#nav {
-    position: absolute;
-    right: 23px;
-    top: 5px;
-    color: white;
-    font-size: 13px;
-    font-weight: normal;
-    height: auto;
-    padding-top: 0;
-    text-align: right;
-}
-#nav li {
-    height: auto;
-    margin: 0 0 0 1px;
-    padding-top: 0;
-}
-#nav li.current, #nav li:hover {
-    background: none;
-}
-#about_menu_link,
-#nav li > a {
-    color: #2d3441;
-    display: block;
-    height: auto;
-    padding: 0 5px 1px 8px;
-    text-decoration: none;
-    line-height: 1em;
-    background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y !important;    /*make sure styles.css does not override this, joka */
-}
-
-.current #about_menu_link,
-#nav li a:hover, #nav li.current a {
-    color: #e0001a;
-}
-
-#nav li:first-child a {
-    background: none;
-}
-
-#user_menu a.show_me {
-    line-height: 1em; /*normalise line height, joka*/
-    background: none; /*disable right dotted line, joka */
-}
-#about_menu_link,
-#user_menu a.show_me {
-    margin-bottom: 6px;
-}
-#about_menu ul.children,
-#nav ul.children, #user_menu ul.children {
-    background: #fff;
-    padding: 0 20px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-}
-#user_menu:hover ul.children {
-    display:block !important; /*workaround, this gets overriden somehow without !important */
-}
-#nav ul.children li, #user_menu ul.children li {
-    background: none !important;
-    border-top: 1px dotted #ccc;
-}
-#nav ul.children li:first-child, #user_menu ul.children li:first-child {
-    border-top: none;
-}
-#about_menu ul.children li a,
-#nav ul.children li a, #user_menu ul.children li a {
-    color: #2D3441;
-    display: block;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 27px;
-    background: none repeat scroll 0 0 transparent !important;
-}
-#nav ul.children li {
- height: auto;
-}
-#nav div ul li ul li ul { /*remove 3.level navigation from wordpress content*/
-    display:none !important;
-}
 .paper_selection {
     padding-top: 45px;
 }

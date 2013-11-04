@@ -1,0 +1,100 @@
+header {
+    height: 147px;
+}
+header .page_margins {
+    position: relative;
+}
+#header {
+    background: none;
+}
+#header #topnav {
+    right: auto;
+    left: 23px;
+    top: 5px;
+}
+#nav {
+    position: absolute;
+    right: 23px;
+    top: 5px;
+
+    .hlist > ul > li {
+        position: relative;
+        line-height: 1;
+        padding: 0 6px;
+        border-left: 1px dotted $border;
+
+        a {
+            color: $black;
+            display: block;
+
+            &:hover, &:focus {
+                color: $primary-color;
+            }
+        }
+
+        &.current {
+            > a {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .icon_link {
+        background: none;
+        line-height: 1;
+    }
+}
+
+#nav li:hover ul.children {
+    display: block;
+}
+#nav ul.children {
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin: 0px;
+    min-width: 200px;
+    text-align: left;
+    right: 0px;
+    z-index: 100;
+    padding: 0 20px;
+    border-left: 1px solid $border;
+    border-right: 1px solid $border;
+    border-bottom: 1px solid $border;
+    line-height: 1.5;
+
+    li {
+        padding: 4px 2px 2px;
+        font-size: 14px;
+        line-height: 25px;
+        display: block;
+
+        border-bottom: 1px dotted $border;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    ul.children {
+        /*
+        position: initial;
+        padding: 0 0 0 20px;
+        border: none;
+        background: none;
+        */
+        display: none;
+    }
+}
+
+// hide watchlist
+#nav_watchlist {
+    display: none;
+}
+
+#header .page_wrapper,
+body.logged_in #header .page_wrapper {
+    height: 115px;
+    padding-top: 32px !important;
+    background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
+}
