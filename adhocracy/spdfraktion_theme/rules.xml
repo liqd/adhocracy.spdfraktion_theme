@@ -152,7 +152,7 @@
               <div id="footer_line">
                 <div role="complementary" class="subcolumns" id="second_footer_line">
                   <div class="c33l footer_content">
-                    <ul>
+                    <ul class="nobullet">
                       <li><a href="/_pages/help">
                         Hilfe
                       </a></li>
@@ -175,7 +175,7 @@
                   </div>
 
                   <div class="c33l footer_content">
-                    <ul>
+                    <ul class="nobullet">
                       <li>
                         <a href="http://twitter.com/#!/spdbt">
                           <img alt="SPD Bundestagsfraktion auf Twitter"
