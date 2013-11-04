@@ -489,23 +489,7 @@ li.content_box:nth-child(2n+2) {
 }
 #main .ui-widget-header,
 #main .ui-tabs-nav li {
-    -moz-border-radius-topright: 0;
-    -webkit-border-top-right-radius: 0;
-    -khtml-border-top-right-radius: 0;
-    border-top-right-radius: 0;
-    -moz-border-radius-topleft: 0;
-    -webkit-border-top-left-radius: 0;
-    -khtml-border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    -moz-border-radius-bottomleft: 0;
-    -webkit-border-bottom-left-radius: 0;
-    -khtml-border-bottom-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    -moz-border-radius-bottomright: 0;
-    -webkit-border-bottom-right-radius: 0;
-    -khtml-border-bottom-right-radius: 0;
-    border-bottom-right-radius: 0;
+    @include border-radius(0);
     border: none;
 }
 
