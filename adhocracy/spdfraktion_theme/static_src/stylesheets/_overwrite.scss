@@ -160,62 +160,52 @@ h1, h2, h3, h4, h5, h6, legend {
 
 #main .ui-tabs-nav,
 #subnav {
-    font-size: 13px;
-}
-#main .ui-tabs-nav li,
-#subnav li {
-    background: none;
-    height: 36px;
-    line-height: 36px;
-    position: relative;
-}
-#main .ui-tabs-nav li:hover,
-#subnav li:hover {
-    background: url("/images/sprite_tab_navigation.png") repeat-x scroll 0 -111px transparent;
-}
-#main .ui-tabs-nav li a,
-#subnav li a {
-    color: #2D3441;
-    font-weight: normal;
-    text-transform: uppercase;
-    padding: 0 19px;
-}
-#main .ui-tabs-nav li a:hover,
-#subnav li a:hover {
-    color: #FFF;
-}
-#main .ui-tabs-nav li a:focus,
-#subnav li a:focus {
-    outline: none;
-}
-#main .ui-tabs-nav li.ui-state-active,
-#subnav li.current {
-    background: #dcd9d0;
-}
-#main .ui-tabs-nav li.ui-state-active:before,
-#subnav li.current:before {
-    content: '';
-    background: url('/static_theme/static/images/element_triangle_grey.jpg') top left no-repeat;
-    width: 34px;
-    height: 15px;
-    display: block;
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    margin-left: -17px;
-}
-#subnav li.settings {
-    margin-left: 0px;
-}
-body.logged_in #nav li {
-    height: auto;
-    padding-top: 0;
-}
-body.logged_in #nav li a {
-    height: auto;
-}
-#user_menu {
-    background: none;
+    li a {
+        color: #2D3441;
+        font-weight: normal;
+        text-transform: uppercase;
+        padding: 0 19px;
+        font-size: 13px;
+
+        // overwrite button definitions
+        border: none;
+        background: none;
+
+        &:hover, &:focus {
+            background: #888;
+            color: white;
+        }
+    }
+
+    li.current {
+        position: relative;
+
+        a {
+            background: #dcd9d0;
+
+            &:hover {
+                color: white;
+                background: #dcd9d0;
+            }
+
+            &:after {
+                display: block;
+                position: absolute;
+                border: 17px solid transparent;
+                border-top-color: #dcd9d0;
+                width: 0;
+                height: 0;
+                bottom: -30px;
+                left: 50%;
+                margin-left: -17px;
+
+                // hide content
+                content: '.';
+                text-padding: 40px;
+                overflow: hidden;
+            }
+        }
+    }
 }
 
 #flash_message {
