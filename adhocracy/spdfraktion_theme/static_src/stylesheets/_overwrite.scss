@@ -12,368 +12,368 @@
 
 body { color: #2d3441; background: #f7f6f2; }
 h2, h3, h4, h5 {
-  color: #000;
+    color: #000;
 }
 h1, a, legend, .tabnav li a.active, .tabnav li a:hover, .ui-widget-content a {
-  color: #e0001a;
+    color: #e0001a;
 }
 h1, h2, h3, h4, h5, h6, legend {
-  font-family: Georgia, serif;
+    font-family: Georgia, serif;
 }
 .page_title, h1, #col1_content > h2, .full_teaser > h2 {
-  background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
-  padding-bottom: 11px;
-  font-size: 34px;
-  font-weight: normal;
-  margin: 0 0 20px 0;
-  color: #e0001a;
+    background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
+    padding-bottom: 11px;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    color: #e0001a;
 }
 
 #col1_content > h2 + .hr, .full_teaser > h2 + .hr {
-  display: none;
+    display: none;
 }
 
 
 .meta a, .comment_form a {
-  color: #666;
+    color: #666;
 }
 .register a, .register a.link_more_info, .filter_box a {
-  color: #2d3441;
+    color: #2d3441;
 }
 .register a.link_register_now, .register a.link_about_info {
-  background-position: 0 -600px; //undo hack to make button work with different word length,  joka
+    background-position: 0 -600px; //undo hack to make button work with different word length,    joka
 }
 .register a.link_register_now:hover, .register a.link_about_info:hover {
-  background-position: 0 -600px; //undo hack to make button work with different word length,  joka
+    background-position: 0 -600px; //undo hack to make button work with different word length,    joka
 }
 .meta a:hover, .register a:hover, .register a.link_more_info:hover, .comment_form a:hover, .filter_box a:hover {
-  color: #e0001a;
-  text-decoration: underline;
+    color: #e0001a;
+    text-decoration: underline;
 }
 a.button, .submit button, .submit input {
-  background: url("/static_theme/static/images/sprite_buttons.png") repeat-x scroll 0 -200px transparent;
-  border: 1px solid #ccc;
-  color: #2d3441;
+    background: url("/static_theme/static/images/sprite_buttons.png") repeat-x scroll 0 -200px transparent;
+    border: 1px solid #ccc;
+    color: #2d3441;
 }
 a.button_small {
-  background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -250px transparent;
-  border: 1px solid #ccc;
-  color: #2d3441;
+    background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -250px transparent;
+    border: 1px solid #ccc;
+    color: #2d3441;
 }
 a.button:hover, a.button_small:hover, .submit button:hover, .submit input:hover {
-  color: #e0001a;
-  text-decoration: none;
+    color: #e0001a;
+    text-decoration: none;
 }
 a.follow_paper {
-  background: url("/static_theme/static/images/sprite_buttons.png") no-repeat scroll 0 -1px transparent;
-  border: 1px solid #ccc;
-  color: #2d3441;
+    background: url("/static_theme/static/images/sprite_buttons.png") no-repeat scroll 0 -1px transparent;
+    border: 1px solid #ccc;
+    color: #2d3441;
 }
 a.show_comments, a.new_comment, a.participate {
-  background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -350px transparent;
-  border: 1px solid #ccc;
-  color: #2d3441;
-  border-radius: 7px;
+    background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -350px transparent;
+    border: 1px solid #ccc;
+    color: #2d3441;
+    border-radius: 7px;
 }
 a.show_comments:hover, a.new_comment:hover, a.participate:hover {
-  color: #e0001a;
-  background-position: 0 -350px;
+    color: #e0001a;
+    background-position: 0 -350px;
 }
 .page_margins {
-  width: 960px;
-  padding: 0 10px;
-  background: #fff;
+    width: 960px;
+    padding: 0 10px;
+    background: #fff;
 }
 .page_wrapper {
-  padding: 0 22px !important;
-  display: block;
-  overflow: hidden;
+    padding: 0 22px !important;
+    display: block;
+    overflow: hidden;
 }
 .full_teaser {
-  padding: 0;
+    padding: 0;
 }
 #col1_content {
-  padding: 0 30px 0 0;
+    padding: 0 30px 0 0;
 }
 #col3_content {
-  padding: 0 0 0 10px;
+    padding: 0 0 0 10px;
 }
 .sidebar_box {
-  background: #f7f6f2;
-  padding: 0 15px 1px 22px;
+    background: #f7f6f2;
+    padding: 0 15px 1px 22px;
 }
 
 #header {
-  background: none;
-  height: 147px;
+    background: none;
+    height: 147px;
 }
 #header .page_wrapper, body.logged_in #header .page_wrapper {
-  height: 115px;
-  padding-top: 32px !important;
-  background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
+    height: 115px;
+    padding-top: 32px !important;
+    background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
 }
 #logo {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 body.logged_in #logo {
-  height: auto;
+    height: auto;
 }
 #header #topnav {
-  right: auto;
-  left: 23px;
-  top: 5px;
-  font-size: 13px;
+    right: auto;
+    left: 23px;
+    top: 5px;
+    font-size: 13px;
 }
 #searchbox, .list_filter {
-  padding-right: 0;
+    padding-right: 0;
 }
 #searchform #s, .list_form input.q {
-  width: 170px;
+    width: 170px;
 }
 
 #nav {
-  position: absolute;
-  right: 23px;
-  top: 5px;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: normal;
-  height: auto;
-  padding-top: 0;
-  text-align: right;
+    position: absolute;
+    right: 23px;
+    top: 5px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+    height: auto;
+    padding-top: 0;
+    text-align: right;
 }
 #nav li {
-  height: auto;
-  margin: 0 0 0 1px;
-  padding-top: 0;
+    height: auto;
+    margin: 0 0 0 1px;
+    padding-top: 0;
 }
 #nav li.current, #nav li:hover {
-  background: none;
+    background: none;
 }
 #about_menu_link,
 #nav li > a {
-  color: #2d3441;
-  display: block;
-  height: auto;
-  padding: 0 5px 1px 8px;
-  text-decoration: none;
-  line-height: 1em;
-  background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y !important;  /*make sure styles.css does not override this, joka */
+    color: #2d3441;
+    display: block;
+    height: auto;
+    padding: 0 5px 1px 8px;
+    text-decoration: none;
+    line-height: 1em;
+    background: url('/static_theme/static/images/element_line_dotted_vertical.gif') left top repeat-y !important;    /*make sure styles.css does not override this, joka */
 }
 
 .current #about_menu_link,
 #nav li a:hover, #nav li.current a {
-  color: #e0001a;
+    color: #e0001a;
 }
 
 #nav li:first-child a {
-  background: none;
+    background: none;
 }
 
 #user_menu a.show_me {
-  line-height: 1em; /*normalise line height, joka*/
-  background: none; /*disable right dotted line, joka */
+    line-height: 1em; /*normalise line height, joka*/
+    background: none; /*disable right dotted line, joka */
 }
 #about_menu_link,
 #user_menu a.show_me {
-  margin-bottom: 6px;
+    margin-bottom: 6px;
 }
 #about_menu ul.children,
 #nav ul.children, #user_menu ul.children {
-  background: #fff;
-  padding: 0 20px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+    background: #fff;
+    padding: 0 20px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 #user_menu:hover ul.children {
-  display:block !important; /*workaround, this gets overriden somehow without !important */
+    display:block !important; /*workaround, this gets overriden somehow without !important */
 }
 #nav ul.children li, #user_menu ul.children li {
-  background: none !important;
-  border-top: 1px dotted #ccc;
+    background: none !important;
+    border-top: 1px dotted #ccc;
 }
 #nav ul.children li:first-child, #user_menu ul.children li:first-child {
-  border-top: none;
+    border-top: none;
 }
 #about_menu ul.children li a,
 #nav ul.children li a, #user_menu ul.children li a {
-  color: #2D3441;
-  display: block;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 27px;
-  background: none repeat scroll 0 0 transparent !important;
+    color: #2D3441;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 27px;
+    background: none repeat scroll 0 0 transparent !important;
 }
 #nav ul.children li {
  height: auto;
 }
 #nav div ul li ul li ul { /*remove 3.level navigation from wordpress content*/
-  display:none !important;
+    display:none !important;
 }
 .paper_selection {
-  padding-top: 45px;
+    padding-top: 45px;
 }
 #sidebar_nav {
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left bottom transparent;
-  margin-bottom: 15px;
-  padding-bottom: 0;
-  font-size: 15px;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left bottom transparent;
+    margin-bottom: 15px;
+    padding-bottom: 0;
+    font-size: 15px;
 }
 #sidebar_nav > div {
     background: none;
     padding-bottom: 0;
 }
 #sidebar_nav ul {
-  background: none;
-  padding: 0;
+    background: none;
+    padding: 0;
 }
 #sidebar_nav li a {
-  color: #2D3441;
-  font-weight: normal;
+    color: #2D3441;
+    font-weight: normal;
 }
 #sidebar_nav li, #sidebar_nav li:first-child {
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
 }
 #sidebar_nav li a:hover:before, #sidebar_nav li a.current:before {
-  background: url("/static_theme/static/images/element_arrow_red.png") no-repeat scroll center transparent;
+    background: url("/static_theme/static/images/element_arrow_red.png") no-repeat scroll center transparent;
 }
 #sidebar_nav li a:hover, #sidebar_nav li a.current {
-  background: none;
-  text-decoration: none;
-  color: #e0001a;
+    background: none;
+    text-decoration: none;
+    color: #e0001a;
 }
 #paper_box, #selection_box {
-  background: #f7f6f2;
+    background: #f7f6f2;
 }
 #subheader {
-  background: none;
-  margin-bottom: 0px;
-  max-height: none;
-  padding-top: 0px;
-  overflow: auto;
+    background: none;
+    margin-bottom: 0px;
+    max-height: none;
+    padding-top: 0px;
+    overflow: auto;
 }
 
 #subheader .page_wrapper {
-  overflow: hidden;
-  display: block;
+    overflow: hidden;
+    display: block;
 }
 
 #main .ui-widget-header,
 #subheader .page_wrapper {
-  background: url("/static_theme/static/images/subheader_shadow_grey.png") repeat-x left bottom #f7f6f2;
-  padding-top: 30px !important;
-  padding-bottom: 15px !important;
+    background: url("/static_theme/static/images/subheader_shadow_grey.png") repeat-x left bottom #f7f6f2;
+    padding-top: 30px !important;
+    padding-bottom: 15px !important;
 }
 #organisation_logo {
-  padding-left: 0px;
+    padding-left: 0px;
 }
 
 #content-startpage {
-  background: url("/static_theme/static/images/box_shadow_grey.png") repeat-x left bottom #f7f6f2;
-  padding: 30px 22px 1px;
-  margin: -30px -22px 0;
-  border-bottom: 1px dotted #CCCCCC;
+    background: url("/static_theme/static/images/box_shadow_grey.png") repeat-x left bottom #f7f6f2;
+    padding: 30px 22px 1px;
+    margin: -30px -22px 0;
+    border-bottom: 1px dotted #CCCCCC;
 }
 .register a.button, .register a.button.large {
-  color: #e0001a;
+    color: #e0001a;
 }
 
 #stats {
-  border-top: none;
-  padding-top: 30px;
+    border-top: none;
+    padding-top: 30px;
 }
 
 #main .ui-tabs-nav,
 #subnav {
-  font-size: 13px;
+    font-size: 13px;
 }
 #main .ui-tabs-nav li,
 #subnav li {
-  background: none;
-  height: 36px;
-  line-height: 36px;
-  position: relative;
+    background: none;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
 }
 #main .ui-tabs-nav li:hover,
 #subnav li:hover {
-  background: url("/images/sprite_tab_navigation.png") repeat-x scroll 0 -111px transparent;
+    background: url("/images/sprite_tab_navigation.png") repeat-x scroll 0 -111px transparent;
 }
 #main .ui-tabs-nav li a,
 #subnav li a {
-  color: #2D3441;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 0 19px;
+    color: #2D3441;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 0 19px;
 }
 #main .ui-tabs-nav li a:hover,
 #subnav li a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 #main .ui-tabs-nav li a:focus,
 #subnav li a:focus {
-  outline: none;
+    outline: none;
 }
 #main .ui-tabs-nav li.ui-state-active,
 #subnav li.current {
-  background: #dcd9d0;
+    background: #dcd9d0;
 }
 #main .ui-tabs-nav li.ui-state-active:before,
 #subnav li.current:before {
-  content: '';
-  background: url('/static_theme/static/images/element_triangle_grey.jpg') top left no-repeat;
-  width: 34px;
-  height: 15px;
-  display: block;
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  margin-left: -17px;
+    content: '';
+    background: url('/static_theme/static/images/element_triangle_grey.jpg') top left no-repeat;
+    width: 34px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -17px;
 }
 #subnav li.settings {
-  margin-left: 0px;
+    margin-left: 0px;
 }
 body.logged_in #nav li {
-  height: auto;
-  padding-top: 0;
+    height: auto;
+    padding-top: 0;
 }
 body.logged_in #nav li a {
-  height: auto;
+    height: auto;
 }
 #user_menu {
-  background: none;
+    background: none;
 }
 
 #flash_message {
     background: none;
 }
 #flash_message .page_wrapper {
-  background: #FFFDE4;
+    background: #FFFDE4;
 }
 
 #main {
-  background: none;
-  margin: 0;
+    background: none;
+    margin: 0;
 }
 #main .page_wrapper {
-  padding-bottom: 60px !important;
-  padding-top: 30px !important;
+    padding-bottom: 60px !important;
+    padding-top: 30px !important;
 }
 #footer {
-  background: none;
+    background: none;
 }
 #footer .page_margins {
-  padding: 10px;
+    padding: 10px;
 }
 #footer .page_wrapper {
-  background: #f7f6f2;
-  padding: 22px !important;
+    background: #f7f6f2;
+    padding: 22px !important;
 }
 #footer_line {
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-y scroll 283px 20px transparent;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-y scroll 283px 20px transparent;
 }
 #second_footer_line {
-  background: none;
+    background: none;
 }
 #footer, .footer_content h3, .footer_content a { color: #666; }
 
@@ -384,133 +384,133 @@ a.icon_link {
 }
 
 .hr {
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
-  height: 1px;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
+    height: 1px;
 }
 .pager_wrapper .hr {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 
 .form_wrapper {
-  max-width: 632px;
+    max-width: 632px;
 }
 
 .form_wrapper, ul.comments_list, .comment_wrapper {
-  background: #f7f6f2;
+    background: #f7f6f2;
 }
 .comment_form {
-  background: #fff;
+    background: #fff;
 }
 .content_list {
-  background: #f7f6f2;
-  padding: 11px;
-  margin-bottom: 22px;
+    background: #f7f6f2;
+    padding: 11px;
+    margin-bottom: 22px;
 }
 li.content_box {
-  background: #fff;
+    background: #fff;
 }
 li.content_box h3, li.content_box .meta {
-  padding: 0 11px;
+    padding: 0 11px;
 }
 
 li.content_box .milestone_row_date {
-  margin-left: 11px;
+    margin-left: 11px;
 }
 
 li.content_box:first-child {
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top #fff;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top #fff;
 }
 li.content_box:nth-child(2n+2) {
-  background: #f7f6f2;
+    background: #f7f6f2;
 }
 /*Tabs onboarding aboutpage*/
 
 #main .ui-widget {
-  font-family: Arial,sans-serif;
+    font-family: Arial,sans-serif;
 }
 #main .ui-widget input,
 #main .ui-widget button {
-  font-family: Arial,sans-serif;
-  font-size: 13px;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
 }
 /* TODO: This could be much shorter [joka] */
 #main .ui-widget p,
 #main .ui-widget h1,
 #main .ui-widget h2,
 #main .ui-widget h3 {
-  margin-left: 23px;
-  margin-right: 23px;
-  padding-left: 0;
-  padding-right: 0;
-  width: 65%;
+    margin-left: 23px;
+    margin-right: 23px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 65%;
 }
 #main .ui-widget-content ul {
-  padding-left: 16px;
+    padding-left: 16px;
 }
 #main .ui-widget .register {
-  margin-left: 13px;
-  margin-bottom: 60px;
+    margin-left: 13px;
+    margin-bottom: 60px;
 }
 #main .ui-widget img {
-  margin-left: 23px;
-  margin-right: 23px;
+    margin-left: 23px;
+    margin-right: 23px;
 }
 #main .ui-widget h1 {
-  margin: 0 23px 27px 23px;
-  padding: 27px 0 0 0;
-  background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
-  padding-bottom: 11px;
+    margin: 0 23px 27px 23px;
+    padding: 27px 0 0 0;
+    background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
+    padding-bottom: 11px;
 }
 #main .ui-widget-content,
 #main.with_wordpress_tabs .page_wrapper {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 #main.with_wordpress_tabs .page_wrapper,
 #main.with_wordpress_tabs #col1_content {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 #main .ui-tabs,
 #main .ui-tabs .ui-tabs-panel {
-  border:none;
-  padding:0;
+    border:none;
+    padding:0;
 }
 #main .ui-tabs-nav {
-  border:none;
-  clear: none;
-  padding-top: 19px;
-  margin: 0px;
+    border:none;
+    clear: none;
+    padding-top: 19px;
+    margin: 0px;
 }
 #main .ui-widget-header {
-  padding-left: 22px;
-  padding-right: 22px;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 #main .ui-widget-header,
 #main .ui-tabs-nav li {
-  -moz-border-radius-topright: 0;
-  -webkit-border-top-right-radius: 0;
-  -khtml-border-top-right-radius: 0;
-  border-top-right-radius: 0;
-  -moz-border-radius-topleft: 0;
-  -webkit-border-top-left-radius: 0;
-  -khtml-border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -khtml-border-bottom-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  -moz-border-radius-bottomright: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -khtml-border-bottom-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border: none;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    -khtml-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    -khtml-border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -khtml-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -khtml-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
 }
 
 #main .put-nav {
-  display:none;
+    display:none;
 }
 label.armhint {
     display: none;
@@ -523,64 +523,64 @@ label.armhint {
 #main .widget-container ul,
 #main ul.subpages li,
 #main .widget-container {
-  list-style: none;
-  background: none;
+    list-style: none;
+    background: none;
 }
 
 
 /* Menu in the right column */
 #secondary {
-  padding: 0 0 0 10px;
+    padding: 0 0 0 10px;
 }
 #secondary ul.xoxo {
-  margin: 0;
+    margin: 0;
 }
 #col3 h3 {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 #col3 ul.subpages {
-  margin: 0;
-  padding: 0;
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left bottom #fff;
+    margin: 0;
+    padding: 0;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left bottom #fff;
 }
 #col3 ul.subpages li {
-  background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top;
+    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top;
 }
 #col3 ul.subpages li a {
-  display: block;
-  color: #2d3441;
-  padding: 0.5em;
-  font-weight: normal;
-  font-size: 15px;
+    display: block;
+    color: #2d3441;
+    padding: 0.5em;
+    font-weight: normal;
+    font-size: 15px;
 }
 #col3 ul.subpages li a:hover, #col3 ul.subpages li.current_page_item a{
-  color: #e0001a;
-  text-decoration: none;
+    color: #e0001a;
+    text-decoration: none;
 }
 #col3 .content_list {
-  padding: 0;
-  margin-bottom: 0;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .pager_wrapper .floatbox {
-  background: #f7f6f2;
+    background: #f7f6f2;
 }
-  #settings #col1 { float: right; width: 750px}
-  #settings #col2 { display:none}
-  #settings #col3 {
+#settings #col1 { float: right; width: 750px}
+#settings #col2 { display:none}
+#settings #col3 {
     width: auto;
     margin: 0 750px 0 -15px;
-  }
-  #settings #col1_content {
+}
+#settings #col1_content {
     padding: 0 0px 0 10px;
     margin: 0 -10px 0 0px;
-  }
-  #settings #col3_content { padding: 0 15px 0 0px }
+}
+#settings #col3_content { padding: 0 15px 0 0px }
 
-  #settings #col3 .affix { width: 164px; top: 135px; }
+#settings #col3 .affix { width: 164px; top: 135px; }
 
 .tooltip {
-  background: #fffcec;
-  border: 1px solid #ffeda7;
-  width: 350px;
+    background: #fffcec;
+    border: 1px solid #ffeda7;
+    width: 350px;
 }
