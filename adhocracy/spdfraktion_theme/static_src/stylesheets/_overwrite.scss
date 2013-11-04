@@ -37,48 +37,6 @@ h1, h2, h3, h4, h5, h6, legend {
 .meta a, .comment_form a {
     color: #666;
 }
-.register a, .register a.link_more_info, .filter_box a {
-    color: #2d3441;
-}
-.register a.link_register_now, .register a.link_about_info {
-    background-position: 0 -600px; //undo hack to make button work with different word length,    joka
-}
-.register a.link_register_now:hover, .register a.link_about_info:hover {
-    background-position: 0 -600px; //undo hack to make button work with different word length,    joka
-}
-.meta a:hover, .register a:hover, .register a.link_more_info:hover, .comment_form a:hover, .filter_box a:hover {
-    color: #e0001a;
-    text-decoration: underline;
-}
-a.button, .submit button, .submit input {
-    background: url("/static_theme/static/images/sprite_buttons.png") repeat-x scroll 0 -200px transparent;
-    border: 1px solid #ccc;
-    color: #2d3441;
-}
-a.button_small {
-    background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -250px transparent;
-    border: 1px solid #ccc;
-    color: #2d3441;
-}
-a.button:hover, a.button_small:hover, .submit button:hover, .submit input:hover {
-    color: #e0001a;
-    text-decoration: none;
-}
-a.follow_paper {
-    background: url("/static_theme/static/images/sprite_buttons.png") no-repeat scroll 0 -1px transparent;
-    border: 1px solid #ccc;
-    color: #2d3441;
-}
-a.show_comments, a.new_comment, a.participate {
-    background: url("/static_theme/static/images/sprite_buttons_small.png") repeat-x scroll 0 -350px transparent;
-    border: 1px solid #ccc;
-    color: #2d3441;
-    border-radius: 7px;
-}
-a.show_comments:hover, a.new_comment:hover, a.participate:hover {
-    color: #e0001a;
-    background-position: 0 -350px;
-}
 .page_margins {
     width: 960px;
     padding: 0 10px;

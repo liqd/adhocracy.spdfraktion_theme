@@ -1,0 +1,70 @@
+@mixin button-background($color) {
+    $color: $button-color; // force button color on all buttons
+    background-color: $color;
+    @include background-image(linear-gradient(to bottom, lighten($color, 14%), $color));
+    color: $black;
+    border: 1px solid $border;
+
+    &:hover {
+        background-color: darken($color, 7%);
+        @include background-image(linear-gradient(to bottom, lighten($color, 7%), darken($color, 7%)));
+    }
+}
+
+@mixin button-round-background() {
+    @include button-background($button-color);
+}
+
+@mixin button($color) {
+    @include button-base;
+    line-height: 35px;
+    min-width: 82px;
+    font-weight: bold;
+    padding: 0 15px;
+
+    @include button-background($color);
+}
+
+@mixin button-small($color1, $color2) {
+    @include button-base;
+    line-height: 14px;
+    @include border-radius(7px);
+    padding: 0 10px;
+    font-size: 11px;
+
+    color: $black;
+    background-color: lighten($color1, 7%);
+    @include background-image(linear-gradient(to bottom, lighten($color1, 14%), $color1));
+    border: 1px solid $border;
+
+    &:hover {
+        color: white;
+        background-color: $color2;
+        @include background-image(linear-gradient(to bottom, lighten($color2, 7%), $color2));
+    }
+    &:active, &.active {
+        color: white;
+        background-color: $color2;
+        @include background-image(linear-gradient(to top, lighten($color2, 7%), $color2));
+        @include box-shadow(1px 1px 1px #333 inset);
+    }
+    .inactive & {
+        background: $bg2 !important;
+        @include box-shadow(none);
+    }
+}
+
+@mixin button-round {
+    @include button-base;
+    line-height: 26px;
+    font-size: 14px;
+    @include border-radius(13px);
+    padding: 0 20px;
+    font-weight: bold;
+
+    @include button-round-background();
+
+    &:hover {
+        text-decoration: none;
+    }
+}
