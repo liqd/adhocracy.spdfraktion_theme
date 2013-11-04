@@ -76,30 +76,47 @@ h1, h2, h3, h4, h5, h6, legend {
     margin-bottom: 15px;
     padding-bottom: 0;
     font-size: 15px;
+
+    > div {
+        background: none;
+        padding-bottom: 0;
+    }
+
+    ul {
+        background: none;
+        padding: 0;
+    }
+
+    li {
+        border-top: none;
+        border-bottom: 1px dotted $border;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            color: #2D3441;
+            font-weight: normal;
+
+            &:hover, &.current {
+                background: none;
+                text-decoration: none;
+                color: $primary-color;
+
+                &:before {
+                    background: url("/static_theme/static/images/element_arrow_red.png") no-repeat scroll center transparent;
+                    width: 13px;
+                    height: 19px;
+                    top: 10px;
+                    left: 1px;
+                    border: none;
+                }
+            }
+        }
+    }
 }
-#sidebar_nav > div {
-    background: none;
-    padding-bottom: 0;
-}
-#sidebar_nav ul {
-    background: none;
-    padding: 0;
-}
-#sidebar_nav li a {
-    color: #2D3441;
-    font-weight: normal;
-}
-#sidebar_nav li, #sidebar_nav li:first-child {
-    background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left top transparent;
-}
-#sidebar_nav li a:hover:before, #sidebar_nav li a.current:before {
-    background: url("/static_theme/static/images/element_arrow_red.png") no-repeat scroll center transparent;
-}
-#sidebar_nav li a:hover, #sidebar_nav li a.current {
-    background: none;
-    text-decoration: none;
-    color: #e0001a;
-}
+
 #paper_box, #selection_box {
     background: #f7f6f2;
 }
