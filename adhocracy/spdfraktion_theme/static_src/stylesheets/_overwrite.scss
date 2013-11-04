@@ -135,7 +135,7 @@ body.logged_in #logo {
     position: absolute;
     right: 23px;
     top: 5px;
-    color: #FFFFFF;
+    color: white;
     font-size: 13px;
     font-weight: normal;
     height: auto;
@@ -537,7 +537,7 @@ label.armhint {
     font-weight: normal;
     font-size: 15px;
 }
-#col3 ul.subpages li a:hover, #col3 ul.subpages li.current_page_item a{
+#col3 ul.subpages li a:hover, #col3 ul.subpages li.current_page_item a {
     color: #e0001a;
     text-decoration: none;
 }
