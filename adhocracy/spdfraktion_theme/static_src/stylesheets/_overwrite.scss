@@ -435,3 +435,8 @@ label.armhint {
 .morelink_header .more_link {
     bottom: 10px;
 }
+
+// set non-white arrow color
+.register a.button:after {
+    background-position-y: -600px;
+}
