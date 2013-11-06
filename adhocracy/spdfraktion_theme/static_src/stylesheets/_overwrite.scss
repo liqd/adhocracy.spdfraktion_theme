@@ -445,3 +445,7 @@ label.armhint {
 .register a.button:after {
     background-position-y: -600px;
 }
+
+.vote_count.neutral {
+    color: $fg1;
+}
