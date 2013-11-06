@@ -49,6 +49,9 @@ h1, h2, h3, h4, h5, h6, legend {
     padding: 0 10px;
     background: white;
 
+    // HACK: clear margins
+    border-top: 1px solid white;
+
     html.overlay & {
         padding: 0;
     }
