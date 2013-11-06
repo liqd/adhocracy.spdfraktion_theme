@@ -452,3 +452,12 @@ label.armhint {
 .vote_count.neutral {
     color: $fg1;
 }
+
+// hide icon when using more_link and icon_link together (deprecated)
+.more_uppercase,
+.more_link,
+.more {
+    &.icon_link {
+        background: none;
+    }
+}
