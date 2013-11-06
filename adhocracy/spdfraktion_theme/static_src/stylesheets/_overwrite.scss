@@ -472,3 +472,7 @@ label.armhint {
         background-color: lighten($default-button-color, 10%);
     }
 }
+
+a.follow_paper:before {
+    @include background-image(linear-gradient(170deg, lighten($default-button-color, 14%), $default-button-color));
+}
