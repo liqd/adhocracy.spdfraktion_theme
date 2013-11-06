@@ -461,3 +461,14 @@ label.armhint {
         background: none;
     }
 }
+
+.pager {
+    .current, a:active {
+        color: white;
+        background-color: $default-button-color;
+    }
+    a:hover, a:focus {
+        color: white;
+        background-color: lighten($default-button-color, 10%);
+    }
+}
