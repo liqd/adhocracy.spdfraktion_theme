@@ -27,7 +27,12 @@ h1, a, legend, .tabnav li a.active, .tabnav li a:hover, .ui-widget-content a {
 h1, h2, h3, h4, h5, h6, legend {
     font-family: Georgia, serif;
 }
-.page_title, h1, #col1_content > h2, .full_teaser > h2 {
+.page_title,
+#col1_content > h1,
+.full_teaser > h1,
+#col1_content > h2,
+.full_teaser > h2,
+.morelink_header > h2 {
     background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
     padding-bottom: 11px;
     font-size: 34px;
