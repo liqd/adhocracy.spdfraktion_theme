@@ -178,6 +178,8 @@ h1, h2, h3, h4, h5, h6, legend {
 #main .ui-tabs-nav,
 #subnav {
     li a {
+        @include button($button-color);
+
         color: #2D3441;
         font-weight: normal;
         text-transform: uppercase;
@@ -194,6 +196,7 @@ h1, h2, h3, h4, h5, h6, legend {
         }
     }
 
+    li.ui-tabs-selected,
     li.current {
         position: relative;
 
