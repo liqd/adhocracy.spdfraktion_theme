@@ -18,10 +18,28 @@ body {
     }
 }
 
+#old-body {
+    width: 960px;
+    background: white;
+    padding: 0 10px 10px;
+    margin: 0 auto;
+
+    // HACK: clear margins
+    border-top: 1px solid white;
+
+    html.overlay & {
+        padding: 0;
+        margin: 0;
+    }
+}
+.page_wrapper {
+    width: 100%;
+}
+
 h2, h3, h4, h5 {
     color: black;
 }
-h1, a, legend, .tabnav li a.active, .tabnav li a:hover, .ui-widget-content a {
+h1, a, legend, .tabnav li a.active, .tabnav li a:hover, .tabnav li a:focus, .ui-widget-content a {
     color: $primary-color;
 }
 h1, h2, h3, h4, h5, h6, legend {
@@ -34,8 +52,8 @@ h1, h2, h3, h4, h5, h6, legend {
 .full_teaser > h2,
 .morelink_header > h2 {
     background: url("/static_theme/static/images/element_line_dotted_large.gif") repeat-x scroll left bottom transparent;
+    font-size: 250%;
     padding-bottom: 11px;
-    font-size: 34px;
     font-weight: normal;
     margin: 0 0 20px 0;
     color: $primary-color;
@@ -49,50 +67,21 @@ h1, h2, h3, h4, h5, h6, legend {
 .meta a, .comment_form a {
     color: $fg1;
 }
-.page_margins {
-    width: 960px;
-    padding: 0 10px;
-    background: white;
 
-    // HACK: clear margins
-    border-top: 1px solid white;
-
-    html.overlay & {
-        padding: 0;
+#searchform, .list_form {
+    input[type='text'].search_text {
+        width: 170px;
     }
-}
-.page_wrapper {
-    padding: 0 22px;
-}
-.full_teaser {
-    padding: 0;
-}
-#col1_content {
-    padding: 0 30px 0 0;
-}
-#col3_content {
-    margin: 0 0 0 10px;
-
-    .content_list {
-        padding: 0;
-    }
-}
-
-#searchbox, .list_filter {
-    padding-right: 0;
-}
-#searchform #s, .list_form input.q {
-    width: 170px;
 }
 
 .paper_selection {
     padding-top: 45px;
 }
 #sidebar_nav {
+    font-size: $large;
     background: url("/static_theme/static/images/element_line_dotted_small.gif") repeat-x scroll left bottom transparent;
-    margin-bottom: 15px;
+    margin-bottom: 1em;
     padding-bottom: 0;
-    font-size: 15px;
 
     > div {
         background: none;
@@ -116,7 +105,7 @@ h1, h2, h3, h4, h5, h6, legend {
             color: #2D3441;
             font-weight: normal;
 
-            &:hover, &.current {
+            &:hover, &:focus, &.current {
                 background: none;
                 text-decoration: none;
                 color: $primary-color;
@@ -139,15 +128,14 @@ h1, h2, h3, h4, h5, h6, legend {
 }
 #subheader {
     background: none;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     max-height: none;
-    padding-top: 0px;
+    padding-top: 0;
     overflow: auto;
 }
 
 #subheader .page_wrapper {
     overflow: hidden;
-    display: block;
 }
 
 #main .ui-widget-header,
@@ -156,14 +144,11 @@ h1, h2, h3, h4, h5, h6, legend {
     padding-top: 30px !important;
     padding-bottom: 15px !important;
 }
-#organisation_logo {
-    padding-left: 0px;
-}
 
 #content-startpage {
     background: url("/static_theme/static/images/box_shadow_grey.png") repeat-x left bottom $bg1;
-    padding: 30px 22px 1px;
-    margin: -30px -22px 0;
+    padding: 30px 1.8em 1px;
+    margin: -30px -1.8em 0;
     border-bottom: 1px dotted $border;
 }
 .register a.button, .register a.button.large {
@@ -180,11 +165,11 @@ h1, h2, h3, h4, h5, h6, legend {
     li a {
         @include button($button-color);
 
+        font-size: $medium;
         color: #2D3441;
         font-weight: normal;
         text-transform: uppercase;
-        padding: 0 19px;
-        font-size: 13px;
+        padding: 0 1.5em;
 
         // overwrite button definitions
         border: none;
@@ -203,7 +188,7 @@ h1, h2, h3, h4, h5, h6, legend {
         a {
             background: #dcd9d0;
 
-            &:hover {
+            &:hover, &:focus {
                 color: white;
                 background: #dcd9d0;
             }
@@ -230,9 +215,10 @@ h1, h2, h3, h4, h5, h6, legend {
 
 #flash_message {
     background: none;
-}
-#flash_message .page_wrapper {
-    background: $flash;
+
+    .page_wrapper {
+        background: $flash;
+    }
 }
 
 #main {
@@ -240,8 +226,8 @@ h1, h2, h3, h4, h5, h6, legend {
     margin: 0;
 }
 #main .page_wrapper {
-    padding-bottom: 60px;
-    padding-top: 30px;
+    padding-bottom: 4.6em;
+    padding-top: 2.3em;
 
     html.overlay & {
         padding: 0;
@@ -250,19 +236,10 @@ h1, h2, h3, h4, h5, h6, legend {
 #footer {
     background: none;
 }
-#footer .page_margins {
-    padding: 10px;
-}
 #footer .page_wrapper {
     background: $bg1;
-    padding: 22px !important;
-}
-.footer_content {
-    padding: 0 1em;
-
-    .subcr {
-        padding: 0;
-    }
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #col1 .content_list {
@@ -286,7 +263,7 @@ h1, h2, h3, h4, h5, h6, legend {
 #main .ui-widget input,
 #main .ui-widget button {
     font-family: Arial,sans-serif;
-    font-size: 13px;
+    font-size: $medium;
 }
 /* TODO: This could be much shorter [joka] */
 #main .ui-widget p,
@@ -335,7 +312,7 @@ h1, h2, h3, h4, h5, h6, legend {
     border:none;
     clear: none;
     padding-top: 19px;
-    margin: 0px;
+    margin: 0;
 }
 #main .ui-widget-header {
     padding-left: 22px;
@@ -385,12 +362,12 @@ label.armhint {
         }
         a {
             display: block;
+            font-size: 120%;
             color: $black;
             padding: 0.5em;
             font-weight: normal;
-            font-size: 1.2em;
         }
-        a:hover, &.current_page_item a {
+        a:hover, a:focus, &.current_page_item a {
             color: $primary-color;
             text-decoration: none;
         }
@@ -399,40 +376,6 @@ label.armhint {
 
 .pager_wrapper .floatbox {
     background: $bg1;
-}
-
-#settings {
-    #col1 {
-        width: 750px;
-
-        #col1_content {
-            padding: 0 0px 0 10px;
-            margin: 0 -10px 0 0px;
-        }
-    }
-    #col3 {
-        width: auto;
-        margin: 0 750px 0 -15px;
-
-        #col3_content {
-            padding: 0 15px 0 0;
-        }
-        .affix {
-            width: 164px;
-            top: 135px;
-        }
-    }
-}
-
-.tooltip {
-    background: #fffcec;
-    border: 1px solid #ffeda7;
-}
-
-#welcome_message .info_box,
-.alert {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 // center event icons

@@ -1,16 +1,14 @@
-header {
-    height: 147px;
-}
-header .page_margins {
-    position: relative;
-}
 #header {
+    height: 147px;
     background: none;
+}
+#header .page_wrapper {
+    position: relative;
 }
 #header #topnav {
     right: auto;
-    left: 23px;
-    top: 5px;
+    left: 1.8em;
+    top: 0.5em;
 }
 #logo {
     display: inline-block;
@@ -19,13 +17,13 @@ header .page_margins {
 
 #nav {
     position: absolute;
-    right: 23px;
-    top: 5px;
+    right: 1.8em;
+    top: 0.5em;
 
     .hlist > ul > li {
         position: relative;
         line-height: 1;
-        padding: 0 6px;
+        padding: 0 0.5em;
         border-left: 1px dotted $border;
 
         a {
@@ -57,10 +55,10 @@ header .page_margins {
     display: none;
     position: absolute;
     background-color: white;
-    margin: 0px;
-    min-width: 200px;
+    margin: 0;
+    min-width: 10em;
     text-align: left;
-    right: 0px;
+    right: 0;
     z-index: 100;
     padding: 0 20px;
     border-left: 1px solid $border;
@@ -70,8 +68,8 @@ header .page_margins {
 
     li {
         padding: 4px 2px 2px;
-        font-size: 14px;
-        line-height: 25px;
+        font-size: $medium;
+        line-height: 1.8;
         display: block;
 
         border-bottom: 1px dotted $border;
@@ -99,7 +97,7 @@ header .page_margins {
 
 #header .page_wrapper,
 body.logged_in #header .page_wrapper {
-    height: 115px;
+    height: 125px + 23px;
     padding-top: 32px !important;
     background: url('/static_theme/static/images/header_image.jpg') center 32px no-repeat;
 }

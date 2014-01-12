@@ -39,7 +39,9 @@
     <xi:include href="../../../adhocracy.wordpressbasic_theme/adhocracy/wordpressbasic_theme/rules_fixlinks.xml" />
 
     <!--Body-->
-    <copy theme="/html/body" content="/html/body" />
+    <drop theme="//div[@id='old-body']/*" if-content="/html/body"/>
+    <append theme="//div[@id='old-body']" content="/html/body/*" />
+
 
     <!--Logo-->
     <replace content="//a[@id='logo']/attribute::href" ><xsl:attribute name="href">http://debatten.zukunftsdialog.spdfraktion.de/instance/debatten</xsl:attribute></replace>
@@ -145,13 +147,10 @@
 
     <!-- Footer -->
     <replace css:content="footer">
-      <footer>
-        <div id="footer">
-          <div class="page_margins">
+      <footer id="footer">
             <div class="page_wrapper">
-              <div id="footer_line">
-                <div role="complementary" class="subcolumns" id="second_footer_line">
-                  <div class="c33l footer_content">
+              <div class="footer_line">
+                  <div id="footer_1">
                     <ul class="nobullet">
                       <li><a href="/_pages/help">
                         Hilfe
@@ -174,7 +173,7 @@
                     </ul>
                   </div>
 
-                  <div class="c33l footer_content">
+                  <div id="footer_2">
                     <ul class="nobullet">
                       <li>
                         <a href="http://twitter.com/#!/spdbt">
@@ -197,8 +196,7 @@
                     </ul>
                   </div>
 
-                  <div class="c33r footer_content">
-                    <div class="subcr">
+                  <div class="footer_3">
                       <div class="footer_box">
                         <div class="subcolumns">
                           <h3>Die Plattform wird betrieben mit</h3>
@@ -223,14 +221,10 @@
                           </p>
                         </div>
                       </div>
-                    </div>
                   </div>
 
-                </div>
               </div>
             </div>
-          </div>
-        </div>
       </footer>
     </replace>
   </rules>
