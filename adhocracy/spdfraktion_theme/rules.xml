@@ -57,13 +57,13 @@
     <!--Navigation - start-->
     <replace css:content="li#nav_home">
       <li>
-        <a href="http://debatten.zukunftsdialog.spdfraktion.de/instance/debatten" class="" rel="" title="Start">Start</a>
+        <a href="https://debatten.zukunftsdialog.spdfraktion.de/instance/debatten" class="" rel="" title="Start">Start</a>
       </li>
     </replace>
     <rules if-path="/instance/debatten">
       <replace css:content="li#nav_home">
         <li class="current">
-          <a href="http://debatten.zukunftsdialog.spdfraktion.de/instance/debatten" class="" rel="" title="Start">Start</a>
+          <a href="https://debatten.zukunftsdialog.spdfraktion.de/instance/debatten" class="" rel="" title="Start">Start</a>
         </li>
       </replace>
     </rules>
